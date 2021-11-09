@@ -1,0 +1,23 @@
+package steps;
+
+import pages.HeaderPage;
+
+public class HeaderPageBL {
+
+    private HeaderPage headerPage;
+
+    public HeaderPageBL() {
+        headerPage = new HeaderPage();
+    }
+
+    // клікнути кнопку
+    public HeaderPageBL clickOnMyAccountButton() {
+        headerPage.getMyAccountButton().click();
+        return this;
+    }
+
+    public RegisterPageBL clickOnRegisterButton() {
+        headerPage.getRegisterButton().click();
+        return new RegisterPageBL();
+    }
+}
