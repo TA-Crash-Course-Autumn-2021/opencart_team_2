@@ -1,4 +1,5 @@
 package enums;
+
 //https://demo.opencart.com/index.php?route=common/home
 //http://localhost/opencart/upload/index.php
 public enum URLs {

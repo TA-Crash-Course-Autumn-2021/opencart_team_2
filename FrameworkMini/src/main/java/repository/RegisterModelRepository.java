@@ -1,8 +1,8 @@
 package repository;
 
-
 import models.RegisterModel;
 import org.apache.commons.lang.RandomStringUtils;
+
 public class RegisterModelRepository {
 
     private RegisterModelRepository() {

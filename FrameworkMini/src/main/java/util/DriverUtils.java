@@ -13,7 +13,7 @@ public class DriverUtils {
         driver = DriverRepository.DRIVERS.get();
     }
 
-    public void clickOnElementJS(WebElement webElement){
+    public void clickOnElementJS(WebElement webElement) {
         getJSExecutor().executeScript("arguments[0].click();", webElement);
     }
 
