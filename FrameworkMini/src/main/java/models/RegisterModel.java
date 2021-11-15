@@ -3,8 +3,6 @@ package models;
 import lombok.Getter;
 
 @Getter
-//@Builder
-//патерн білдер
 public class RegisterModel {
 
     private String firstName;
@@ -20,7 +18,7 @@ public class RegisterModel {
     public static RegisterModel.Builder getBuilder() {
         return new RegisterModel().new Builder();
     }
-//
+
     public class Builder {
         public RegisterModel.Builder firstName(String value) {
             firstName = value;
@@ -56,5 +54,5 @@ public class RegisterModel {
             return RegisterModel.this;
         }
     }
-    //
+
 }
