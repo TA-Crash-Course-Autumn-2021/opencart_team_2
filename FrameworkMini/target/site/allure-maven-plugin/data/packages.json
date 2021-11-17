@@ -1,0 +1,163 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "AddFourProdToWishlistTest",
+    "children" : [ {
+      "name" : "loginUserWithInWishListPage",
+      "uid" : "4e0e4468a7753332",
+      "parentUid" : "558f9b7305e6086dd4d5a0ce348ffb1a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637145172911,
+        "stop" : 1637145177432,
+        "duration" : 4521
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "searchElementAndAddToWishlist",
+      "uid" : "50d6adea3920f821",
+      "parentUid" : "558f9b7305e6086dd4d5a0ce348ffb1a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637145177845,
+        "stop" : 1637145184990,
+        "duration" : 7145
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "558f9b7305e6086dd4d5a0ce348ffb1a"
+  }, {
+    "name" : "SearchAdd2ProductTest",
+    "children" : [ {
+      "name" : "searchElementAndAddToCard",
+      "uid" : "f4af0e352ce36ecc",
+      "parentUid" : "33915b83ad09768365c9ddc2a2eab289",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637145188483,
+        "stop" : 1637145193414,
+        "duration" : 4931
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "33915b83ad09768365c9ddc2a2eab289"
+  }, {
+    "name" : "AddOneComplexElementTest",
+    "children" : [ {
+      "name" : "addOneComplexElementTest",
+      "uid" : "7f05b67501d6e9d7",
+      "parentUid" : "255c82823b91a1dde47e8229ba3b400d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637145196124,
+        "stop" : 1637145207989,
+        "duration" : 11865
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "255c82823b91a1dde47e8229ba3b400d"
+  }, {
+    "name" : "SearchAdd4ProductTest",
+    "children" : [ {
+      "name" : "searchElementAndAddToCard",
+      "uid" : "97a9a2e2ec1a4a3a",
+      "parentUid" : "befae40186f22fa06a740a5af5fdf477",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637145210991,
+        "stop" : 1637145227208,
+        "duration" : 16217
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "befae40186f22fa06a740a5af5fdf477"
+  }, {
+    "name" : "AddOneProdToWishlistTest",
+    "children" : [ {
+      "name" : "loginUserWithInWishListPage",
+      "uid" : "d2a8e578ba8ac494",
+      "parentUid" : "44a48e4eb3fc96b0e2593c7ddd488875",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637145229947,
+        "stop" : 1637145233323,
+        "duration" : 3376
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "searchElementAndAddToWishlist",
+      "uid" : "8142584d5b768641",
+      "parentUid" : "44a48e4eb3fc96b0e2593c7ddd488875",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637145233327,
+        "stop" : 1637145235311,
+        "duration" : 1984
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "44a48e4eb3fc96b0e2593c7ddd488875"
+  }, {
+    "name" : "UserRegisterTest",
+    "children" : [ {
+      "name" : "registerUserWithValidParameters",
+      "uid" : "ed67ed0524a3294f",
+      "parentUid" : "47f8aea4bf3b2411a9409352713604e2",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637145238219,
+        "stop" : 1637145244685,
+        "duration" : 6466
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "47f8aea4bf3b2411a9409352713604e2"
+  }, {
+    "name" : "AddTwoProdToWishlistTest",
+    "children" : [ {
+      "name" : "loginUserWithInWishListPage",
+      "uid" : "13eac68ee9cdf315",
+      "parentUid" : "bc101f444b906877286944e79ef3eecd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637145247077,
+        "stop" : 1637145250330,
+        "duration" : 3253
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "searchElementAndAddToWishlist",
+      "uid" : "313889e54f45527f",
+      "parentUid" : "bc101f444b906877286944e79ef3eecd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637145250333,
+        "stop" : 1637145253778,
+        "duration" : 3445
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "bc101f444b906877286944e79ef3eecd"
+  } ]
+}

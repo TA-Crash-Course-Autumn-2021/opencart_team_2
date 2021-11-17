@@ -1,0 +1,110 @@
+{
+  "uid" : "f4af0e352ce36ecc",
+  "name" : "searchElementAndAddToCard",
+  "fullName" : "SearchAdd2ProductTest.searchElementAndAddToCard",
+  "historyId" : "4fc85d5a9151f489ce62aba11703ecbe",
+  "time" : {
+    "start" : 1637145188483,
+    "stop" : 1637145193414,
+    "duration" : 4931
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "createDriver",
+    "time" : {
+      "start" : 1637145185529,
+      "stop" : 1637145188479,
+      "duration" : 2950
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1637145167036,
+      "stop" : 1637145168202,
+      "duration" : 1166
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "closeBrowser",
+    "time" : {
+      "start" : 1637145193416,
+      "stop" : 1637145193773,
+      "duration" : 357
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "SearchAdd2ProductTest"
+  }, {
+    "name" : "testClass",
+    "value" : "SearchAdd2ProductTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "searchElementAndAddToCard"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Surefire suite"
+  }, {
+    "name" : "suite",
+    "value" : "Surefire test"
+  }, {
+    "name" : "subSuite",
+    "value" : "SearchAdd2ProductTest"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-QKRRSS8"
+  }, {
+    "name" : "thread",
+    "value" : "11156@DESKTOP-QKRRSS8.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f4af0e352ce36ecc.json",
+  "parameterValues" : [ ]
+}
