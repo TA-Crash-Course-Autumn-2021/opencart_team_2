@@ -13,7 +13,7 @@ public class MenuPage extends BasePage{
         return driver.findElement(By.xpath(".//*[contains(@href,'category&path=20') and @class='dropdown-toggle']"));
     }
     public WebElement getMac(){
-        return driver.findElement(By.xpath(".//*[contains(@href,'category&path=20_27')]"));
+        return driver.findElement(By.xpath(".//a[text()='Mac (1)']"));
     }
 
     public WebElement getLaptops_NotebooksButton() {
@@ -25,21 +25,21 @@ public class MenuPage extends BasePage{
 
     }
     public WebElement getMonitors(){
-        return driver.findElement(By.xpath(".//*[contains(@href,'category&path=25_28')]"));
+        return driver.findElement(By.xpath(".//a[text()='Monitors (2)']"));
     }
 
     public WebElement getTabletsButton() {
-        return driver.findElement(By.xpath(".//*[contains(@href,'category&path=57') and @class='dropdown-toggle']"));
+        return driver.findElement(By.xpath(".//a[text()='Tablets']"));
 
     }
 
     public WebElement getSoftwareButton() {
-        return driver.findElement(By.xpath(".//*[contains(@href,'category&path=17') and @class='dropdown-toggle']"));
+        return driver.findElement(By.xpath(".//a[text()='Software']"));
 
     }
 
     public WebElement getPhones_PDAsButton() {
-        return driver.findElement(By.xpath(".//*[contains(@href,'category&path=24') and @class='dropdown-toggle']"));
+        return driver.findElement(By.xpath(".//a[text()='Phones & PDAs']"));
 
     }
 

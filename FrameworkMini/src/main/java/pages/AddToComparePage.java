@@ -11,37 +11,37 @@ public class AddToComparePage extends BasePage{
     private WebElement alertSuccessAdd;
 
     public WebElement getCanonEOS5DButton() {
-        return driver.findElement(By.xpath(".//*[contains(@href,'product&product_id=30&search=Canon')]"));
+        return driver.findElement(By.xpath(".//a[text()='Canon EOS 5D']"));
     }
 
     public WebElement getAddToCompareButton(){
         return driver.findElement(By.xpath(".//*[contains(@data-original-title ,'Compare this Product')]"));
     }
     public WebElement getIPhoneButton() {
-        return driver.findElement(By.xpath(".//*[contains(@href,'product&product_id=40&search=Iphone')]"));
+        return driver.findElement(By.xpath(".//a[text()='iPhone']"));
     }
 
     public WebElement getSamsungSyncMaster941BWButton() {
 
-        return driver.findElement(By.xpath(".//*[contains(@href,'product&product_id=33&search=Samsung')]"));
+        return driver.findElement(By.xpath(".//a[text()='Samsung SyncMaster 941BW']"));
     }
     public WebElement getMacBookButton() {
-        return driver.findElement(By.xpath(".//*[contains(@href,'product&product_id=43&search=MacBook')]"));
+        return driver.findElement(By.xpath(".//a[text()='MacBook']"));
     }
     public WebElement getIPodClassicButton() {
-        return driver.findElement(By.xpath(".//*[contains(@href,'product&product_id=48&search=iPod')]"));
+        return driver.findElement(By.xpath(".//a[text()='iPod Classic']"));
     }
     public WebElement getMacBookAirButton() {
-        return driver.findElement(By.xpath(".//*[contains(@href,'product&product_id=44&search=MacBook')]"));
+        return driver.findElement(By.xpath(".//a[text()='MacBook Air']"));
     }
     public WebElement getIMacButton() {
-        return driver.findElement(By.xpath(".//*[contains(@href,'product&path=20_27&product_id=41')]"));
+        return driver.findElement(By.xpath(".//a[text()='iMac']"));
     }
     public WebElement getSamsungGalaxyTab101Button() {
-        return driver.findElement(By.xpath(".//*[contains(@href,'product&path=57&product_id=49')]"));
+        return driver.findElement(By.xpath(".//a[text()='Samsung Galaxy Tab 10.1']"));
     }
     public WebElement getAppleCinema30Button() {
-        return driver.findElement(By.xpath(".//*[contains(@href,'product&path=25_28&product_id=42')]"));
+        return driver.findElement(By.xpath(".//a[text()='Apple Cinema 30\"']"));
     }
 
     public WebElement getAlertSuccessAdd() {
