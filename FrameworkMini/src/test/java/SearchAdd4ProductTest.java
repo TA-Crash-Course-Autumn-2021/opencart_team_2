@@ -18,7 +18,7 @@ public class SearchAdd4ProductTest extends BaseTest {
                 .sendKeysSearch("Mac")
                 .sendKeysSearchENTER()
                 .clickOnAddToCartMacBookAirButton();
-        searchPageBL.verifyAddMacBookAir();
+        searchPageBL.verifyAddProductButton("MacBook Air");
 
         mainPageBL.getHeaderPageBL()
                 .clickSearch()
@@ -26,7 +26,7 @@ public class SearchAdd4ProductTest extends BaseTest {
                 .sendKeysSearch("Mac")
                 .sendKeysSearchENTER()
                 .clickOnAddToCartMacBookButton();
-        searchPageBL.verifyAddMacBook();
+        searchPageBL.verifyAddProductButton("MacBook");
 
         mainPageBL.getHeaderPageBL()
                 .clickSearch()
@@ -34,7 +34,7 @@ public class SearchAdd4ProductTest extends BaseTest {
                 .sendKeysSearch("Samsung")
                 .sendKeysSearchENTER()
                 .clickOnAddToCartSamsungSyncMaster941BWButton();
-        searchPageBL.verifyAddSamsungSyncMaster941BWButton();
+        searchPageBL.verifyAddProductButton("Samsung SyncMaster 941BW");
 
         mainPageBL.getHeaderPageBL()
                 .clickSearch()

@@ -3,6 +3,7 @@ package steps;
 import models.LoginModel;
 import org.openqa.selenium.Keys;
 import pages.HeaderPage;
+import pages.SearchPage;
 import pages.SuccessLoginOpenWishList;
 import repository.LoginModelRepository;
 
@@ -17,6 +18,11 @@ public class HeaderPageBL {
     public HeaderPageBL clickSearch() {
         headerPage.getSearch().click();
         return this;
+    }
+
+    public SearchPageBL clickSearchHeaderButton() {
+        headerPage.getButtonSearchHeader().click();
+        return new SearchPageBL();
     }
 
     public HeaderPageBL clearSearch() {

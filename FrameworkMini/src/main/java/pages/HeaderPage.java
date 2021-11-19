@@ -7,6 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HeaderPage extends BasePage {
 
+    @FindBy(xpath = "//*[@class='btn btn-default btn-lg']")
+    private WebElement buttonSearchHeader;
+
     @FindBy(xpath = ".//*[@title='My Account']")
     private WebElement myAccountButton;
 
@@ -18,6 +21,10 @@ public class HeaderPage extends BasePage {
 
     @FindBy(id = "wishlist-total")
     private WebElement wishListButton;
+
+    public WebElement getButtonSearchHeader() {
+        return buttonSearchHeader;
+    }
 
     public WebElement getMyAccountButton() {
         wait.until(ExpectedConditions.visibilityOf(myAccountButton));
