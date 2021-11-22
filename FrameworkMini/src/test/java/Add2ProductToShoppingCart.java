@@ -11,12 +11,12 @@ public class Add2ProductToShoppingCart extends BaseTest {
         MainPageBL mainPageBL = new MainPageBL();
         mainPageBL.getMenuPageBL()
                 .clickOnDesktopsButton()
-                .clickOnMacButton()
+                .clickOnMacButtons()
                 .clickOnAddToCartIMacButton()
                 .verifyAddProductButton("iMac");
 
         mainPageBL.getMenuPageBL()
-                .clickOnTabletsButton()
+                .clickOnTabletsButtons()
                 .clickOnAddToCartSamsungGalaxyTab10Button()
                 .verifyAddProductButton("Samsung Galaxy Tab 10.1");
     }

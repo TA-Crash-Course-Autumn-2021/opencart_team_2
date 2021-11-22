@@ -12,28 +12,28 @@ public class Add4ProductToShoppingCart extends BaseTest {
         MainPageBL mainPageBL = new MainPageBL();
         mainPageBL.getMenuPageBL()
                 .clickOnDesktopsButton()
-                .clickOnMacButton()
+                .clickOnMacButtons()
                 .clickOnAddToCartIMacButton()
                 .verifyAddProductButton("iMac");
 
         MainPageBL mainPageBL2 = new MainPageBL();
         mainPageBL2.getMenuPageBL()
                 .clickOnComponentsButton()
-                .clickOnMonitorsButton()
+                .clickOnMonitorsButtons()
                 .clickOnAddToCartSamsungSyncMaster941BWButton()
                 .verifyAddProductButton("Samsung SyncMaster 941BW");
 
         mainPageBL.getMenuPageBL()
-                .clickOnTabletsButton()
+                .clickOnTabletsButtons()
                 .clickOnAddToCartSamsungGalaxyTab10Button()
                 .verifyAddProductButton("Samsung Galaxy Tab 10.1");
 
         mainPageBL.getMenuPageBL()
-                .clickOnSoftwareButton()
+                .clickOnSoftwareButtons()
                 .verifySubtitleNoProductInCategory();
 
         mainPageBL.getMenuPageBL()
-                .clickOnPhones_PDAsButton()
+                .clickOnPhones_PDAsButtons()
                 .clickOnAddToCartPalmTreoProButton()
                 .verifyAddProductButton("Palm Treo Pro");
     }

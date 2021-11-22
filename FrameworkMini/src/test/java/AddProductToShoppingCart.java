@@ -11,7 +11,7 @@ public class AddProductToShoppingCart extends BaseTest {
         MainPageBL mainPageBL = new MainPageBL();
         mainPageBL.getMenuPageBL()
                 .clickOnDesktopsButton()
-                .clickOnMacButton()
+                .clickOnMacButtons()
                 .clickOnAddToCartIMacButton()
                 .verifyAddProductButton("iMac");
     }
