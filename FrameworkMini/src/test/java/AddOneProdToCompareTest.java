@@ -13,7 +13,7 @@ public class AddOneProdToCompareTest extends BaseTest{
         MainPageBL mainPageBL = new MainPageBL();
         AddToComparePageBL addToComparePageBL = mainPageBL.getMenuPageBL()
                 .clickOnDesktopsButton()
-                .clickOnMacButton()
+                .clickOnMacButtonAddToComparePage()
                 .clickOnIMacAirMenuButton()
                 .clickOnAddToCompareButton();
         addToComparePageBL.verifyAddIMac();

@@ -39,7 +39,4 @@ public class AddTwoProdToWishlistTest extends BaseTest {
                     .clickOnAddToWishListIPhoneButton();
             addToWishListPageBL.verifyAddIPhone();
         }
-
-
-
 }

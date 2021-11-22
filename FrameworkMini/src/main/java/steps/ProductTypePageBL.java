@@ -34,6 +34,4 @@ public class ProductTypePageBL {
         String expectedMessage = "There are no products to list in this category.";
         Assert.assertTrue(productTypePage.getSubtitleNoProductInCategory().getText().contains(expectedMessage), "Incorrect page title");
     }
-
-
 }

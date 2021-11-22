@@ -12,7 +12,7 @@ public class AddTwoProdToCompareTest extends BaseTest{
         MainPageBL mainPageBL = new MainPageBL();
         AddToComparePageBL addToComparePageBL = mainPageBL.getMenuPageBL()
                 .clickOnComponentsButton()
-                .clickOnMonitorsButton()
+                .clickOnMonitorsButtonAddToComparePage()
                 .clickOnAppleCinema30Button()
                 .clickOnAddToCompareButton();
         addToComparePageBL.verifyAddAppleCinema30();

@@ -30,8 +30,5 @@ public class AddOneProdToWishlistTest extends BaseTest {
                 .clickOnAddToWishListMacBookButton();
 
         addToWishListPageBL.verifyAddMacBook();
-
-
-
     }
 }
