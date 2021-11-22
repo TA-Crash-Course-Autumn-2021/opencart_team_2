@@ -14,16 +14,6 @@ public class MenuPageBL {
         return this;
     }
 
-    public AddToComparePageBL clickOnMacButton() {
-        menuPage.getMac().click();
-        return new AddToComparePageBL();
-    }
-
-    public ProductTypePageBL clickOnMacButtons() {
-        menuPage.getMac().click();
-        return new ProductTypePageBL();
-    }
-
     public MenuPageBL clickOnLaptops_NotebooksButton() {
         menuPage.getLaptops_NotebooksButton().click();
         return this;
@@ -34,27 +24,27 @@ public class MenuPageBL {
         return this;
     }
 
-    public AddToComparePageBL clickOnMonitorsButton() {
+    public AddToComparePageBL clickOnMonitorsButtonAddToComparePage() {
         menuPage.getMonitors().click();
         return new AddToComparePageBL();
     }
 
-    public MenuPageBL clickOnTabletsButton() {
-        menuPage.getTabletsButton().click();
-        return this;
+    public AddToComparePageBL clickOnMacButtonAddToComparePage() {
+        menuPage.getMac().click();
+        return new AddToComparePageBL();
     }
 
-    public AddToComparePageBL clickOnSoftwareButton() {
+    public AddToComparePageBL clickOnSoftwareButtonAddToComparePage() {
         menuPage.getSoftwareButton().click();
         return new AddToComparePageBL();
     }
 
-    public AddToComparePageBL clickOnPhones_PDAsButton() {
+    public AddToComparePageBL clickOnPhones_PDAsButtonAddToComparePage() {
         menuPage.getPhones_PDAsButton().click();
         return new AddToComparePageBL();
     }
 
-    public AddToComparePageBL clickOnCamerasButton() {
+    public AddToComparePageBL clickOnCamerasButtonAddToComparePage() {
         menuPage.getCamerasButton().click();
         return new AddToComparePageBL();
     }
@@ -64,33 +54,33 @@ public class MenuPageBL {
         return this;
     }
 
-    public ProductTypePageBL clickOnMonitorsButtons() {
+    public ProductTypePageBL clickOnMonitorsButton() {
         menuPage.getMonitors().click();
         return new ProductTypePageBL();
     }
 
-    public ProductTypePageBL clickOnTabletsButtons() {
+    public ProductTypePageBL clickOnTabletsButton() {
         menuPage.getTabletsButton().click();
         return new ProductTypePageBL();
     }
 
-    public ProductTypePageBL clickOnSoftwareButtons() {
+    public ProductTypePageBL clickOnSoftwareButton() {
         menuPage.getSoftwareButton().click();
         return new ProductTypePageBL();
     }
 
-    public ProductTypePageBL clickOnPhones_PDAsButtons() {
+    public ProductTypePageBL clickOnPhones_PDAsButton() {
         menuPage.getPhones_PDAsButton().click();
         return new ProductTypePageBL();
     }
 
-    public ProductTypePageBL clickOnCamerasButtons() {
+    public ProductTypePageBL clickOnCamerasButton() {
         menuPage.getCamerasButton().click();
         return new ProductTypePageBL();
     }
 
-    public ProductTypePageBL clickMP3playerButtons() {
-        menuPage.getMP3playerButton().click();
+    public ProductTypePageBL clickOnMacButton() {
+        menuPage.getMac().click();
         return new ProductTypePageBL();
     }
 }

@@ -27,7 +27,6 @@ public class SearchAdd2ProductTest extends BaseTest {
                 .clickOnAddToCartSamsungSyncMaster941BWButton();
         searchPageBL.verifyAddProductButton("Samsung SyncMaster 941BW");
 
-
         MiniCartPageBL miniCartPage = new MiniCartPageBL();
         miniCartPage.clickOnMiniCartButton();
         miniCartPage.verifyMacBookInCardInTheCart();
