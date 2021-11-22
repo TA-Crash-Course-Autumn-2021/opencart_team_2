@@ -1,10 +1,80 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SearchPage extends BasePage {
+
+
+    @FindBy(xpath = "//h1[text()='Search']")
+    private WebElement titleOfSearch;
+
+    @FindBy(id = "input-search")
+    private WebElement searchCriteria;
+
+    @FindBy(id = "description")
+    private WebElement searchInProductDescriptions;
+
+    @FindBy(name = "category_id")
+    private WebElement category;
+
+    public WebElement chooseCategoryProduct(String product) {
+        return driver.findElement(By.xpath("//option[text() = '" + product + "']")); //Cameras // value="32"
+    }
+
+    @FindBy(name = "sub_category")
+    private WebElement subCategory;
+
+    @FindBy(id = "button-search")
+    private WebElement buttonSearchGlobal;
+
+    @FindBy(xpath = "//h2")
+    private WebElement headerMeeting;
+
+    @FindBy(xpath = "//p[text() = 'There is no product that matches the search criteria.']")
+    private WebElement titleNoProduct;
+
+    public WebElement getTitleOfSearch() {
+        return titleOfSearch;
+    }
+
+    public WebElement getSearchCriteria() {
+        return searchCriteria;
+    }
+
+    public WebElement getSearchInProductDescriptions() {
+        return searchInProductDescriptions;
+    }
+
+    public WebElement getCategory() {
+        return category;
+    }
+
+    public WebElement getSubCategory() {
+        return subCategory;
+    }
+
+    public WebElement getButtonSearchGlobal() {
+        return buttonSearchGlobal;
+    }
+
+    public WebElement getHeaderMeeting() {
+        return headerMeeting;
+    }
+
+    public WebElement getTitleNoProduct() {
+        return titleNoProduct;
+    }
+
+    public WebElement getTitleOfSearchProduct(String product) {
+        return driver.findElement(By.xpath("//h1[text()='Search - " + product + "']")); //HTC Touch HD
+    }
+
+    //////////////////////////////Add to Cart Buttons/////////////////////////////////////////////////////
+    @FindBy(xpath = "//img[@title = 'HTC Touch HD']/../../../div//div[@class='button-group']//button[contains(@onclick,'cart.add')]")
+    private WebElement buttonAddToCartHTCTouchHD;
 
     @FindBy(xpath = "//img[@title = 'MacBook Air']/../../../div//div[@class='button-group']//button[contains(@onclick,'cart.add')]")
     private WebElement buttonAddToCartMacBookAir;
@@ -21,6 +91,10 @@ public class SearchPage extends BasePage {
     @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
     private WebElement alertSuccessAdd;
 
+    public WebElement getAddToCartHTCTouchHD() {
+        return buttonAddToCartHTCTouchHD;
+    }
+
     public WebElement getAddToCartMacBookAirButton() {
         return buttonAddToCartMacBookAir;
     }
@@ -33,12 +107,12 @@ public class SearchPage extends BasePage {
         return buttonAddToCartSamsungSyncMaster941BW;
     }
 
+    public WebElement getAddToCartAppleCinema30() {
+        return buttonAddAppleCinema30;
+    }
+
     public WebElement getAlertSuccessAdd() {
         wait.until(ExpectedConditions.visibilityOf(alertSuccessAdd));
         return alertSuccessAdd;
-    }
-
-    public WebElement getAddToCartAppleCinema30() {
-        return buttonAddAppleCinema30;
     }
 }

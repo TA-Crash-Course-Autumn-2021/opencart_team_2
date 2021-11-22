@@ -8,7 +8,7 @@ import static enums.URLs.BASE_URL;
 
 public class SearchAdd2ProductTest extends BaseTest {
     @Test
-    public void searchElementAndAddToCard() {
+    public void search2ProductAndAddToCart() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
@@ -16,8 +16,8 @@ public class SearchAdd2ProductTest extends BaseTest {
                 .clearSearch()
                 .sendKeysSearch("Mac")
                 .sendKeysSearchENTER()
-                .clickOnAddToCartMacBookAirButton();
-        searchPageBL.verifyAddMacBookAir();
+                .clickOnAddToCartMacBookButton();
+        searchPageBL.verifyAddProductButton("MacBook");
 
         mainPageBL.getHeaderPageBL()
                 .clickSearch()
@@ -25,12 +25,12 @@ public class SearchAdd2ProductTest extends BaseTest {
                 .sendKeysSearch("Samsung")
                 .sendKeysSearchENTER()
                 .clickOnAddToCartSamsungSyncMaster941BWButton();
-        searchPageBL.verifyAddSamsungSyncMaster941BWButton();
+        searchPageBL.verifyAddProductButton("Samsung SyncMaster 941BW");
 
 
         MiniCartPageBL miniCartPage = new MiniCartPageBL();
         miniCartPage.clickOnMiniCartButton();
-        miniCartPage.verifyMacBookAirInCardInTheCart();
+        miniCartPage.verifyMacBookInCardInTheCart();
         miniCartPage.verifySamsungSyncMasterInTheCart();
     }
 }
