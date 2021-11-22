@@ -67,6 +67,9 @@ public class HeaderPageBL {
         headerPage.getLoginButton().click();
         return new WishListPageBL();
     }
-
+    public CheckoutPageBL clickOnCheckoutButton() {
+        headerPage.getCheckoutButton().click();
+        return new CheckoutPageBL();
+    }
 }
 

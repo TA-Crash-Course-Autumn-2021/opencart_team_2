@@ -91,4 +91,24 @@ public class SearchPageBL {
         Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(expectedMessage), "Failed to add item to cart");
         Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(Product), "Other item");
     }
+    public void verifyAddMacBookAir() {
+        String expectedMessage = "Success";
+        String nameItem = "MacBook Air";
+        Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(expectedMessage), "Failed to add item to cart");
+        Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(nameItem), "Other item");
+    }
+
+    public void verifyAddMacBook() {
+        String expectedMessage = "Success";
+        String nameItem = "MacBook";
+        Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(expectedMessage), "Failed to add item to cart");
+        Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(nameItem), "Other item");
+    }
+
+    public void verifyAddSamsungSyncMaster941BWButton() {
+        String expectedMessage = "Success";
+        String nameItem = "Samsung SyncMaster 941BW";
+        Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(expectedMessage), "Failed to add item to cart");
+        Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(nameItem), "Other item");
+    }
 }

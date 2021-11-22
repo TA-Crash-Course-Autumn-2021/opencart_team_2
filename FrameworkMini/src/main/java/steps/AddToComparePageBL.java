@@ -18,6 +18,10 @@ public class AddToComparePageBL {
         addToComparePage.getAddToCompareButton().click();
         return this;
     }
+    public AddToComparePageBL clickOnAddToWishListButton() {
+        addToComparePage.getAddToWishListButton().click();
+        return this;
+    }
     public AddToComparePageBL clickOnIPhoneButton() {
         addToComparePage.getIPhoneButton().click();
         return this;

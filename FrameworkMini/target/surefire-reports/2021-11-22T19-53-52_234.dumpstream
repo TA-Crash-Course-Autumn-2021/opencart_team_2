@@ -1,0 +1,15 @@
+# Created at 2021-11-22T19:53:55.659
+SLF4J: No SLF4J providers were found.
+
+# Created at 2021-11-22T19:53:55.660
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+
+# Created at 2021-11-22T19:53:55.661
+SLF4J: See http://www.slf4j.org/codes.html#noProviders for further details.
+
+# Created at 2021-11-22T19:53:56.077
+[AppClassLoader@266474c2] error at io\qameta\allure\aspects\StepsAspects.java::0 the @annotation pointcut expression is only supported at Java 5 compliance level or above
+
+# Created at 2021-11-22T19:53:56.083
+[AppClassLoader@266474c2] error at io\qameta\allure\aspects\AttachmentsAspects.java::0 the @annotation pointcut expression is only supported at Java 5 compliance level or above
+

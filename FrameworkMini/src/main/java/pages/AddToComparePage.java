@@ -17,6 +17,9 @@ public class AddToComparePage extends BasePage{
     public WebElement getAddToCompareButton(){
         return driver.findElement(By.xpath(".//*[contains(@data-original-title ,'Compare this Product')]"));
     }
+    public WebElement getAddToWishListButton(){
+        return driver.findElement(By.xpath(".//*[contains(@data-original-title ,'Add to Wish List')]"));
+    }
     public WebElement getIPhoneButton() {
         return driver.findElement(By.xpath(".//a[text()='iPhone']"));
     }
