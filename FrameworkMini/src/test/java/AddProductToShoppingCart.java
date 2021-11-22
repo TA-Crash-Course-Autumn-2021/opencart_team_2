@@ -4,9 +4,9 @@ import steps.MainPageBL;
 
 import static enums.URLs.BASE_URL;
 
-public class Add2ProductToShoppingCard extends BaseTest {
+public class AddProductToShoppingCart extends BaseTest {
     @Test
-    public void addOneComplexElementTest() throws InterruptedException {
+    public void addOneComplexProductToCartTest() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         mainPageBL.getMenuPageBL()
@@ -14,11 +14,5 @@ public class Add2ProductToShoppingCard extends BaseTest {
                 .clickOnMacButton()
                 .clickOnAddToCartIMacButton()
                 .verifyAddProductButton("iMac");
-
-        mainPageBL.getMenuPageBL()
-                .clickOnTabletsButton()
-                .clickOnAddToCartSamsungGalaxyTab10Button()
-                .verifyAddProductButton("Samsung Galaxy Tab 10.1");
     }
 }
-

@@ -8,7 +8,7 @@ import static enums.URLs.BASE_URL;
 
 public class AddOneComplexElementTest extends BaseTest {
     @Test
-    public void addOneComplexElementTest() {
+    public void addOneComplexElementTCartTest() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         mainPageBL.getHeaderPageBL()

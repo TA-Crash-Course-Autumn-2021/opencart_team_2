@@ -8,7 +8,7 @@ import static enums.URLs.BASE_URL;
 
 public class SearchAdd2ProductTest extends BaseTest {
     @Test
-    public void searchElementAndAddToCard() {
+    public void search2ProductAndAddToCart() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
