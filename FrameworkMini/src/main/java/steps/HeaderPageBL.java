@@ -38,6 +38,10 @@ public class HeaderPageBL {
         headerPage.getSearch().sendKeys(Keys.ENTER);
         return new AddToWishListPageBL();
     }
+    public AddToComparePageBL sendKeysSearchForCompareProdENTER() {
+        headerPage.getSearch().sendKeys(Keys.ENTER);
+        return new AddToComparePageBL();
+    }
 
     public HeaderPageBL clickOnMyAccountButton() {
         headerPage.getMyAccountButton().click();
