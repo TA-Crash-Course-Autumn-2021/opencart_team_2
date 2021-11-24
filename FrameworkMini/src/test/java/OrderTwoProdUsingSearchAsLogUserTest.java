@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 import steps.CheckoutPageBL;
 import steps.MainPageBL;
 import steps.SearchPageBL;
-import steps.WishListPageBL;
+import steps.LoginUserByWishListPageBL;
 
 import static enums.URLs.BASE_URL;
 
@@ -12,7 +12,7 @@ public class OrderTwoProdUsingSearchAsLogUserTest extends BaseTest{
     public void loginUserWithInWishListPage() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
-        WishListPageBL wishListPageBL = mainPageBL.getHeaderPageBL()
+        LoginUserByWishListPageBL wishListPageBL = mainPageBL.getHeaderPageBL()
                 .clickOnWishListButton()
                 .clickOnLoginButton()
                 .loginPerson();
@@ -41,7 +41,7 @@ public class OrderTwoProdUsingSearchAsLogUserTest extends BaseTest{
     }
 
     @Test
-    public void searchEoCard(){
+    public void stepCheckoutPerson(){
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()

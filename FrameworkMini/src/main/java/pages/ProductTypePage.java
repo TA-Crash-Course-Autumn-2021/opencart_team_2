@@ -30,6 +30,14 @@ public class ProductTypePage extends BasePage {
     @FindBy(xpath = "//p[text() = 'There are no products to list in this category.']")
     private WebElement subtitleNoProductInCategory;
 
+    @FindBy(id = "button-cart")
+    private WebElement inputButtonAddToCart;
+
+    public WebElement getInputButtonAddToCart() {
+        wait.until(ExpectedConditions.visibilityOf(inputButtonAddToCart));
+        return inputButtonAddToCart;
+    }
+
     public WebElement getAddToCartIMac() {
         return buttonAddToCartIMac;
     }

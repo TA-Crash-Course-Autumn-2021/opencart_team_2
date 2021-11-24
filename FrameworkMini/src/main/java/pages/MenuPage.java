@@ -17,6 +17,7 @@ public class MenuPage extends BasePage{
     private WebElement monitorsButton;
 
     public WebElement getTabletsButton() {
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(".//a[text()='Tablets']"))));
         return driver.findElement(By.xpath(".//a[text()='Tablets']"));
     }
 

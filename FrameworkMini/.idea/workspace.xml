@@ -5,27 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="680eb2ec-64c7-46ae-be3e-a2e547888fec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/CheckoutModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/CheckoutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/SuccessCheckoutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/repository/CheckoutModelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/steps/CheckoutPageBL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AddToCompareAndWishlistTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/OrderOneProdUsingSearchAsLogUserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/OrderTreeProdUsingSearchAsLogUserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/OrderTwoProdUsingSearchAsLogUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/OrderOneProdUsingProductPageAsLogUserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/OrderTreeProdUsingProductPageAsLogUserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/OrderTwoProdUsingProductPageAsLogUserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/AddToComparePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/AddToComparePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HeaderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HeaderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/steps/AddToComparePageBL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/AddToComparePageBL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MenuPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ProductTypePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ProductTypePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/WishListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginUserByWishListPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/steps/HeaderPageBL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/HeaderPageBL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/steps/SearchPageBL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/SearchPageBL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/ProductTypePageBL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/ProductTypePageBL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/WishListPageBL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/LoginUserByWishListPageBL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AddFourProdToWishlistTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddFourProdToWishlistTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AddOneProdToWishlistTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddOneProdToWishlistTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AddToCompareAndWishlistTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddToCompareAndWishlistTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AddTwoProdToWishlistTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddTwoProdToWishlistTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OrderOneProdUsingSearchAsLogUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrderOneProdUsingSearchAsLogUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OrderTreeProdUsingSearchAsLogUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrderTreeProdUsingSearchAsLogUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OrderTwoProdUsingSearchAsLogUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrderTwoProdUsingSearchAsLogUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/MenuPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/MenuPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/ProductTypePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/ProductTypePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/steps/ProductTypePageBL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/steps/ProductTypePageBL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/OrderOneProdUsingSearchAsLogUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrderOneProdUsingSearchAsLogUserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/OrderTreeProdUsingSearchAsLogUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrderTreeProdUsingSearchAsLogUserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/OrderTwoProdUsingSearchAsLogUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/OrderTwoProdUsingSearchAsLogUserTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -39,7 +53,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../FrameworkMini" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -55,7 +69,7 @@
       <command value="mvn clean test site" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.AddToCompareAndWishlistTest">
+  <component name="RunManager" selected="TestNG.AddFourProdToWishlistTest">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -67,21 +81,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Add4ProductToShoppingCart" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AddFourProdToWishlistTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="opencartcrashcourse" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Add4ProductToShoppingCart" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddToCompareAndWishlistTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="opencartcrashcourse" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AddToCompareAndWishlistTest" />
+      <option name="MAIN_CLASS_NAME" value="AddFourProdToWishlistTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -93,6 +96,17 @@
       <module name="opencartcrashcourse" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="OrderOneProdUsingSearchAsLogUserTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderTreeProdUsingProductPageAsLogUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="opencartcrashcourse" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrderTreeProdUsingProductPageAsLogUserTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -124,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddToCompareAndWishlistTest" />
+        <item itemvalue="TestNG.AddFourProdToWishlistTest" />
         <item itemvalue="TestNG.OrderOneProdUsingSearchAsLogUserTest" />
-        <item itemvalue="TestNG.OrderTreeProdUsingSearchAsLogUserTest" />
         <item itemvalue="TestNG.OrderTwoProdUsingSearchAsLogUserTest" />
-        <item itemvalue="TestNG.Add4ProductToShoppingCart" />
+        <item itemvalue="TestNG.OrderTreeProdUsingSearchAsLogUserTest" />
+        <item itemvalue="TestNG.OrderTreeProdUsingProductPageAsLogUserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -154,5 +168,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/OrderTwoProdUsingSearchAsLogUserTest.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
