@@ -58,6 +58,23 @@ public class AddToComparePageBL {
         addToComparePage.getSamsungGalaxyTab101Button().click();
         return this;
     }
+    public AddToComparePageBL clickOnProductComparisonMac(){
+        addToComparePage.getProductComparisonMac().click();
+        return this;
+    }
+    public AddToComparePageBL clickOnProductComparisonIPhone(){
+        addToComparePage.getProductComparisonIPhone().click();
+        return this;
+    }
+    public AddToComparePageBL clickOnAddToShoppingCartButton(){
+        addToComparePage.getAddToShoppingCart().click();
+        return this;
+    }
+
+    public AddToComparePageBL clickOnRemoveButton(){
+        addToComparePage.getRemoveBottom().click();
+        return this;
+    }
     public void verifyAddCanonEOS5D() {
         String expectedMessage = "Success";
         String nameItem = "Canon EOS 5D";

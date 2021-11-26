@@ -51,4 +51,23 @@ public class AddToComparePage extends BasePage{
         wait.until(ExpectedConditions.visibilityOf(alertSuccessAdd));
         return alertSuccessAdd;
     }
+    public  WebElement getProductComparisonMac(){
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(".//a[text()='iMac']"))));
+        return driver.findElement(By.xpath(".//a[text()='product comparison']"));
+    }
+    public  WebElement getProductComparisonIPhone(){
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(".//a[text()='iPhone']"))));
+        return driver.findElement(By.xpath(".//a[text()='product comparison']"));
+
+    }
+    public WebElement getAddToShoppingCart(){
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//td//input[@type = 'button' and @value = 'Add to Cart']"))));
+        return driver.findElement(By.xpath ("//td//input[@type = 'button' and @value = 'Add to Cart']"));
+
+    }
+
+    public WebElement getRemoveBottom(){
+           return driver.findElement(By.xpath(".//a[text()='Remove']"));
+
+    }
 }

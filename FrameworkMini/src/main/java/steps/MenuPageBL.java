@@ -24,6 +24,7 @@ public class MenuPageBL {
         return this;
     }
 
+
     public AddToComparePageBL clickOnMonitorsButtonAddToComparePage() {
         menuPage.getMonitors().click();
         return new AddToComparePageBL();

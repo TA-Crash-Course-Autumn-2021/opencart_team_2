@@ -64,14 +64,10 @@ public class CheckoutPageBL {
         return this;
     }
 
-
-    //    Alert simpleAlert = driver.switchTo().alert();
     private void clickCountry() {
         checkoutPage.getCountryInput().click();
     }
-    //  private void accept(){
-    //    checkoutPage.getAccept();
-    //  }
+
     private void chooseCountry(int value) {
         clickCountry();
         checkoutPage.chooseCountry(value).click();

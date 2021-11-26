@@ -144,9 +144,6 @@ public class CheckoutPage extends BasePage{
         return driver.findElement(By.xpath("//select[contains(@id, 'input-payment-country')]//option[@value = '" + value + "']"));
     }
 
-    public WebElement clickBilling() {
-        return driver.findElement(By.xpath(".//*[contains(@id,'cart-total')]"));
-    }
 
     public WebElement getStep() {
         return driver.findElement(By.xpath(".//*[(@href='#collapse-shipping-address')]"));
@@ -155,8 +152,5 @@ public class CheckoutPage extends BasePage{
     public WebElement getTerms_conditions() {
         return terms_conditions;
     }
-
-  //  public WebElement getAccept(){
-
 
 }
