@@ -74,8 +74,9 @@ public class AddCurrenciesPageBL {
         addCurrenciesPage.getSaveCurrencyButton().click();
     }
 
-    public void verifyUserRegistration() {
+    public CurrenciesPageBL verifyAddNewCurrency() {
         String expectedMessage = "Success: You have modified currencies!";
-        Assert.assertTrue(addCurrenciesPage.getAlertSuccessAddCurrency().getText().contains(expectedMessage), "Incorrect page title");
+        Assert.assertTrue(addCurrenciesPage.getAlertSuccessAddCurrency().getText().contains(expectedMessage), "Incorrect alert");
+        return new CurrenciesPageBL();
     }
 }

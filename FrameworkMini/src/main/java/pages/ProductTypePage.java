@@ -30,6 +30,15 @@ public class ProductTypePage extends BasePage {
     @FindBy(xpath = "//p[text() = 'There are no products to list in this category.']")
     private WebElement subtitleNoProductInCategory;
 
+    @FindBy(xpath = "//button[@class='btn btn-link dropdown-toggle']//strong")
+    private WebElement symbolСurrentCurrency;
+
+    @FindBy(xpath = "//a[text()='Samsung SyncMaster 941BW']/../following-sibling::p[@class='price']")
+    private WebElement priceSamsungSyncMaster941BW;
+
+    @FindBy(xpath = "//a[text()='Samsung SyncMaster 941BW']/../following-sibling::p[@class='price']//span[@class='price-tax']")
+    private WebElement taxSamsungSyncMaster941BW;
+
     public WebElement getAddToCartIMac() {
         return buttonAddToCartIMac;
     }
@@ -53,5 +62,17 @@ public class ProductTypePage extends BasePage {
     public WebElement getAlertSuccessAdd() {
         wait.until(ExpectedConditions.visibilityOf(alertSuccessAdd));
         return alertSuccessAdd;
+    }
+
+    public WebElement getSymbolСurrentCurrency() {
+        return symbolСurrentCurrency;
+    }
+
+    public WebElement getPriceSamsungSyncMaster941BW() {
+        return priceSamsungSyncMaster941BW;
+    }
+
+    public WebElement getTaxSamsungSyncMaster941BW() {
+        return taxSamsungSyncMaster941BW;
     }
 }

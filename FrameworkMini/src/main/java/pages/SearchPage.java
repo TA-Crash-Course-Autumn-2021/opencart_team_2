@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SearchPage extends BasePage {
 
-
     @FindBy(xpath = "//h1[text()='Search']")
     private WebElement titleOfSearch;
 
@@ -21,7 +20,7 @@ public class SearchPage extends BasePage {
     private WebElement category;
 
     public WebElement chooseCategoryProduct(String product) {
-        return driver.findElement(By.xpath("//option[text() = '" + product + "']")); //Cameras // value="32"
+        return driver.findElement(By.xpath("//option[text() = '" + product + "']")); //Cameras
     }
 
     @FindBy(name = "sub_category")
@@ -35,6 +34,15 @@ public class SearchPage extends BasePage {
 
     @FindBy(xpath = "//p[text() = 'There is no product that matches the search criteria.']")
     private WebElement titleNoProduct;
+
+    @FindBy(xpath = "//button[@class='btn btn-link dropdown-toggle']//strong")
+    private WebElement symbolСurrentCurrency;
+
+    @FindBy(xpath = "//a[text()='iMac']/../following-sibling::p[@class='price']")
+    private WebElement priceiMac;
+
+    @FindBy(xpath = "//a[text()='iMac']/../following-sibling::p[@class='price']//span[@class='price-tax']")
+    private WebElement taxiMac;
 
     public WebElement getTitleOfSearch() {
         return titleOfSearch;
@@ -70,6 +78,20 @@ public class SearchPage extends BasePage {
 
     public WebElement getTitleOfSearchProduct(String product) {
         return driver.findElement(By.xpath("//h1[text()='Search - " + product + "']")); //HTC Touch HD
+    }
+
+    public WebElement getSymbolСurrentCurrency() {
+        return symbolСurrentCurrency;
+    }
+
+    public WebElement getPriceiMac() {
+        wait.until(ExpectedConditions.visibilityOf(priceiMac));
+        return priceiMac;
+    }
+
+    public WebElement getTaxiMac() {
+        wait.until(ExpectedConditions.visibilityOf(taxiMac));
+        return taxiMac;
     }
 
     //////////////////////////////Add to Cart Buttons/////////////////////////////////////////////////////
