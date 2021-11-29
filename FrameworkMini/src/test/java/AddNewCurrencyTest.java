@@ -18,6 +18,6 @@ public class AddNewCurrencyTest extends BaseTest {
                 .clickSubmenuCurrencies()
                 .clickOnAddNewCurrencyButton()
                 .registerNewCurrency()
-                .verifyUserRegistration();
+                .verifyAddNewCurrency();
     }
 }

@@ -4,9 +4,9 @@ import steps.LoginAdministrationPageBL;
 
 import static enums.URLs.ADMIN_PANEL_URL;
 
-public class EditCurrencyTest extends BaseTest {
+public class DeleteCurrencyTest extends BaseTest{
     @Test
-    public void editNewCurrencyTest() {
+    public void deleteCurrencyTest() {
         new Navigation().navigateToUrl(ADMIN_PANEL_URL.getValue());
         LoginAdministrationPageBL loginAdministrationPageBL = new LoginAdministrationPageBL();
         loginAdministrationPageBL
@@ -16,8 +16,9 @@ public class EditCurrencyTest extends BaseTest {
                 .clickMenuSystem()
                 .clickSubmenuLocalisation()
                 .clickSubmenuCurrencies()
-                .clickOnEditCurrenciesButton("Ukrainian Hryvnia")
-                .registerEditCurrency()
-                .verifyEditCurrency();
+                .clickChooseCurrencyCheckbox("Hryvnia")
+                .clickOnDeleteCurrencyButton()
+                .confirmDeleteCurrency()
+                .verifyDeleteCurrency();
     }
 }

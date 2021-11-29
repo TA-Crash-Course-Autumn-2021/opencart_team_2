@@ -23,4 +23,19 @@ public class DashboardPageBL {
         dashboardPage.getSubmenuCurrencies().click();
         return new CurrenciesPageBL();
     }
+
+    public DashboardPageBL clickSubmenuTaxes() {
+        dashboardPage.getSubmenuTaxes().click();
+        return this;
+    }
+
+    public TaxClassesPageBL clickSubmenuTaxClasses() {
+        dashboardPage.getSubmenuTaxClasses().click();
+        return new TaxClassesPageBL();
+    }
+
+    public TaxRatesPageBL clickSubmenuTaxRates() {
+        dashboardPage.getSubmenuTaxRates().click();
+        return new TaxRatesPageBL();
+    }
 }

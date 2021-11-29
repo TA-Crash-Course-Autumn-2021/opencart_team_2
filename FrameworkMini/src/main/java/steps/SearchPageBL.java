@@ -60,6 +60,35 @@ public class SearchPageBL {
         Assert.assertEquals(expectedMessage, searchPage.getTitleNoProduct().getText(), "Incorrect page subtitle");
     }
 
+    public SearchPageBL getSymbolСurrentCurrency() {
+        System.out.println(searchPage.getSymbolСurrentCurrency().getText());
+        return this;
+    }
+
+    public String getTaxiMacStringType() {
+        String temp = searchPage.getTaxiMac().getText().replace("Ex Tax: ", "");
+        return temp.replace(searchPage.getSymbolСurrentCurrency().getText(), "");
+    }
+
+    public String getPriceiMacStringType() {
+        String withoutSymbol = searchPage.getPriceiMac().getText().replace(searchPage.getSymbolСurrentCurrency().getText(), "");
+        String temp = searchPage.getTaxiMac().getText().replace(searchPage.getSymbolСurrentCurrency().getText(), "");
+        withoutSymbol = withoutSymbol.replace("\n","");
+        return withoutSymbol.replace(temp,"");
+    }
+
+    public SearchPageBL verifyiMacPrice() {
+        String expectedMessage = "4.593";
+        Assert.assertTrue(this.getPriceiMacStringType().equals(expectedMessage), "Incorrect price iMac");
+        return this;
+    }
+
+    public SearchPageBL verifyiMacTax() {
+        String expectedMessage = "3.765";
+        Assert.assertTrue(this.getTaxiMacStringType().equals(expectedMessage), "Incorrect tax iMac");
+        return this;
+    }
+
     //////////////////////////////////////Add to cart button and verify alert////////////////////////////////////////////////////////
     public SearchPageBL clickOnAddToCartHTCTouchHDButton() {
         searchPage.getAddToCartHTCTouchHD().click();
@@ -86,10 +115,10 @@ public class SearchPageBL {
         return new AppleCinemaPageBL();
     }
 
-    public void verifyAddProductButton(String Product) {
+    public void verifyAddProductButton(String product) {
         String expectedMessage = "Success";
         Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(expectedMessage), "Failed to add item to cart");
-        Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(Product), "Other item");
+        Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(product), "Other item");
     }
     public void verifyAddMacBookAir() {
         String expectedMessage = "Success";

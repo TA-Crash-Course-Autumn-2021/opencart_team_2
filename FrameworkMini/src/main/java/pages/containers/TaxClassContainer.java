@@ -5,37 +5,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
-import java.util.List;
-
-public class CurrenciesContainer extends BasePage {
+public class TaxClassContainer extends BasePage {
 
     private WebElement rootElement;
 
-    public CurrenciesContainer(WebElement element) {
+    public TaxClassContainer(WebElement element) {
         this.rootElement = element;
     }
 
-    public WebElement getCheckboxChooseCurrency() {
+    public WebElement getCheckboxChooseTaxClass() {
         return rootElement.findElement(By.xpath(".//td[1]"));
     }
 
-    public String getCurrencyTitle() {
+    public String getTaxClassTitle() {
         return rootElement.findElement(By.xpath(".//td[2]")).getText();
     }
 
-    public String getCode() {
-        return rootElement.findElement(By.xpath(".//td[3]")).getText();
-    }
-
-    public String getValue() {
-        return rootElement.findElement(By.xpath(".//td[4]")).getText();
-    }
-
-    public String getLastUpdate() {
-        return rootElement.findElement(By.xpath(".//td[5]")).getText();
-    }
-
-    public WebElement getActionEditButton() {
+    public WebElement getActionEditTaxButton() {
         wait.until(ExpectedConditions.visibilityOf(rootElement.findElement(By.xpath(".//*[@data-original-title='Edit']"))));
         return rootElement.findElement(By.xpath(".//*[@data-original-title='Edit']"));
     }

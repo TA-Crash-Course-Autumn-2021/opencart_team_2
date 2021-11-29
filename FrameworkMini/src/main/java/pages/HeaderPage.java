@@ -25,6 +25,21 @@ public class HeaderPage extends BasePage {
     @FindBy(id = "wishlist-total")
     private WebElement wishListButton;
 
+    @FindBy(xpath = "//*[@class='btn btn-link dropdown-toggle']")
+    private WebElement currencyButton;
+
+    @FindBy(name = "UAH")
+    private WebElement UAHButton;
+
+    @FindBy(xpath = "//button[@class='btn btn-link dropdown-toggle']//strong")
+    private WebElement symbolСurrentCurrency;
+
+    @FindBy(xpath = "//a[text()='MacBook']/../following-sibling::p[@class='price']")
+    private WebElement priceMacbook;
+
+    @FindBy(xpath = "//a[text()='MacBook']/../following-sibling::p[@class='price']//span[@class='price-tax']")
+    private WebElement taxMacbook;
+
     public WebElement getButtonSearchHeader() {
         return buttonSearchHeader;
     }
@@ -51,6 +66,26 @@ public class HeaderPage extends BasePage {
     }
     public WebElement getLoginButton() {
         return driver.findElement(By.xpath(".//*[contains(@href,'login') and @class='list-group-item']"));
-
     }
+
+    public WebElement getCurrencyButton() {
+        return currencyButton;
+    }
+
+    public WebElement getUAHButton() {
+        return UAHButton;
+    }
+
+    public WebElement getSymbolСurrentCurrency() {
+        return symbolСurrentCurrency;
+    }
+
+    public WebElement getPriceMacbook() {
+        return priceMacbook;
+    }
+
+    public WebElement getTaxMacbook() {
+        return taxMacbook;
+    }
+
 }
