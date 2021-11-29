@@ -29,8 +29,15 @@ public class CheckoutPage extends BasePage{
     @FindBy(xpath = "//select[contains(@id, 'input-payment-zone')]")
     private WebElement region_state;
 
+    @FindBy(xpath = ".//*[@id='button-account']")
+    private WebElement continue1Button;
+
+
     @FindBy(xpath = ".//*[@value='Continue']")
     private WebElement continue2Button;
+
+    @FindBy(xpath = ".//*[@id='button-guest']")
+    private WebElement continue2GuestButton;
 
     @FindBy(xpath = ".//*[@id='button-shipping-address']")
     private WebElement continue3Button;
@@ -60,9 +67,22 @@ public class CheckoutPage extends BasePage{
     @FindBy(xpath = ".//*[@id='button-confirm']")
     private WebElement confirmOrderButton;
 
+    @FindBy(id = "input-payment-email")
+    private WebElement emailInput;
+
+    @FindBy(id = "input-payment-telephone")
+    private WebElement telephoneInput;
+
+    @FindBy(xpath = "//*[@name='account' and @value='guest']")
+    private WebElement chooseGuestCheckoutButton;
+
     public WebElement getFirstNameInput() {
         wait.until(ExpectedConditions.visibilityOf(firstNameInput));
         return firstNameInput;
+    }
+    public WebElement getChooseGuestCheckoutButton() {
+        wait.until(ExpectedConditions.visibilityOf(chooseGuestCheckoutButton));
+        return chooseGuestCheckoutButton;
     }
 
     public WebElement getLastNameInput() {
@@ -99,8 +119,16 @@ public class CheckoutPage extends BasePage{
         return driver.findElement(By.xpath("//select[contains(@id, 'input-payment-zone')]//option[@value = '" + value + "']"));
     }
 
+    public WebElement getContinue1Button() {
+        return continue1Button;
+    }
+
     public WebElement getContinue2Button() {
         return continue2Button;
+    }
+
+    public WebElement getContinue2GuestButton() {
+        return continue2GuestButton;
     }
 
     public WebElement getContinue3Button() {
@@ -151,6 +179,14 @@ public class CheckoutPage extends BasePage{
 
     public WebElement getTerms_conditions() {
         return terms_conditions;
+    }
+
+    public WebElement getTelephoneInput() {
+        return telephoneInput;
+    }
+
+    public WebElement getEmailInput() {
+        return emailInput;
     }
 
 }

@@ -14,6 +14,8 @@ public class CheckoutModelRepository {
                 .city(RandomStringUtils.randomAlphabetic(7))
                 .postCode(RandomStringUtils.randomAlphabetic(5))
                 .country(2)
+                .email(RandomStringUtils.randomAlphabetic(5) + "@gmail.com")
+                .telephone(RandomStringUtils.randomNumeric(10))
                 .region_state(37)
                 .build();
     }

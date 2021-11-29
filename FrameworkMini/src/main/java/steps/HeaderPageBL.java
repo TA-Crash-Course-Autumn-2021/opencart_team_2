@@ -54,7 +54,10 @@ public class HeaderPageBL {
         headerPage.getRegisterButton().click();
         return new RegisterPageBL();
     }
-
+    public WishListPageBL clickWishListButton(){
+        headerPage.getWishListButton().click();
+        return new WishListPageBL();
+    }
     public HeaderPageBL clickOnWishListButton() {
         headerPage.getWishListButton().click();
         return this;

@@ -13,7 +13,6 @@ public class CheckoutModel {
     private String address1;
     private int country;
     private int region_state;
-
-
-
+    private String email;
+    private String telephone;
 }

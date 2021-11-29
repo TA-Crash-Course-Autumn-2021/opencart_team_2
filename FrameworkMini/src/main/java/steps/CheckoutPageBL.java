@@ -64,6 +64,28 @@ public class CheckoutPageBL {
         return this;
     }
 
+    public CheckoutPageBL checkoutPersonStep1() {
+        clickOnGuestCheckoutButton();
+        clickOnContinue1Button();
+        return this;
+    }
+
+    public CheckoutPageBL checkoutPersonStep2ForGuest() {
+        CheckoutModel checkoutModel = CheckoutModelRepository.getCheckoutModel();
+        inputFirstName(checkoutModel.getFirstName());
+        inputLastName(checkoutModel.getLastName());
+        inputEmail(checkoutModel.getEmail());
+        inputTelephone(checkoutModel.getTelephone());
+        inputAddress1(checkoutModel.getAddress1());
+        inputCity(checkoutModel.getCity());
+        inputPostCode(checkoutModel.getPostCode());
+        chooseCountry(checkoutModel.getCountry());
+        chooseRegionState(checkoutModel.getRegion_state());
+        clickOnContinue2GuestButton();
+        return this;
+    }
+
+
     private void clickCountry() {
         checkoutPage.getCountryInput().click();
     }
@@ -102,8 +124,14 @@ public class CheckoutPageBL {
         clickRegionState();
         checkoutPage.chooseRegionState(value).click();
     }
+    private void clickOnContinue1Button() {
+        checkoutPage.getContinue1Button().click();
+    }
     private void clickOnContinue2Button() {
         checkoutPage.getContinue2Button().click();
+    }
+    private void clickOnContinue2GuestButton() {
+        checkoutPage.getContinue2GuestButton().click();
     }
     private void clickOnContinue3Button() {
         checkoutPage.getContinue3Button().click();
@@ -140,7 +168,19 @@ public class CheckoutPageBL {
         checkoutPage.getConfirmOrderButton().click();
     }
 
+    private void clickOnGuestCheckoutButton() {
+        checkoutPage.getChooseGuestCheckoutButton().click();
+    }
 
+    private void inputEmail(String email) {
+        checkoutPage.getEmailInput().clear();
+        checkoutPage.getEmailInput().sendKeys(email);
+    }
+
+    private void inputTelephone(String telephone) {
+        checkoutPage.getTelephoneInput().clear();
+        checkoutPage.getTelephoneInput().sendKeys(telephone);
+    }
 
     public void verifyCheckout() {
         String expectedMessage = "Your order has been placed!";
