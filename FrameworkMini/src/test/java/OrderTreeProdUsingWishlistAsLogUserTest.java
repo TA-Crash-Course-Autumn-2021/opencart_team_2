@@ -4,7 +4,7 @@ import steps.*;
 
 import static enums.URLs.BASE_URL;
 
-public class OrderTwoProdUsingWishlistAsLogUserTest extends BaseTest{
+public class OrderTreeProdUsingWishlistAsLogUserTest extends BaseTest{
     @Test
     public void loginUserWithInWishListPage() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
@@ -40,11 +40,11 @@ public class OrderTwoProdUsingWishlistAsLogUserTest extends BaseTest{
         MainPageBL mainPageBL = new MainPageBL();
         AddToWishListPageBL addToWishListPageBL =
                 mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("iPhone")
-                .sendKeysSearchProdENTER()
-                .clickOnAddToWishListIPhoneButton();
+                        .clickSearch()
+                        .clearSearch()
+                        .sendKeysSearch("iPhone")
+                        .sendKeysSearchProdENTER()
+                        .clickOnAddToWishListIPhoneButton();
         addToWishListPageBL.verifyAddIPhone();
 
         WishListPageBL wishListPageBL = mainPageBL.getHeaderPageBL()
@@ -53,6 +53,24 @@ public class OrderTwoProdUsingWishlistAsLogUserTest extends BaseTest{
                 .verifyAddProductButton("iPhone");
     }
 
+    @Test
+    public void searchElementAndAddToWishlist3() {
+        new Navigation().navigateToUrl(BASE_URL.getValue());
+        MainPageBL mainPageBL = new MainPageBL();
+        AddToWishListPageBL addToWishListPageBL =
+                mainPageBL.getHeaderPageBL()
+                        .clickSearch()
+                        .clearSearch()
+                        .sendKeysSearch("Samsung")
+                        .sendKeysSearchProdENTER()
+                        .clickOnAddToWishListSamsungSyncMaster941BWButton();
+        addToWishListPageBL.verifyAddSamsungSyncMaster941BWButton();
+
+        mainPageBL.getHeaderPageBL()
+                .clickWishListButton()
+                .clickOnButtonAddToCartSamsungSyncMaster941BW()
+                .verifyAddProductButton("Samsung SyncMaster 941BW");
+    }
 
     @Test
     public void stepCheckoutPerson(){
