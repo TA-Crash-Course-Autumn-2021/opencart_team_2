@@ -115,9 +115,9 @@ public class SearchPageBL {
         return new AppleCinemaPageBL();
     }
 
-    public void verifyAddProductButton(String Product) {
+    public void verifyAddProductButton(String product) {
         String expectedMessage = "Success";
         Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(expectedMessage), "Failed to add item to cart");
-        Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(Product), "Other item");
+        Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(product), "Other item");
     }
 }
