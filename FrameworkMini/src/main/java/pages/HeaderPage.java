@@ -16,6 +16,9 @@ public class HeaderPage extends BasePage {
     @FindBy(xpath = ".//*[contains(@href,'register')]")
     private WebElement registerButton;
 
+    @FindBy(xpath = ".//*[@title='Checkout']")
+    private WebElement checkoutButton;
+
     @FindBy(name = "search")
     private WebElement search;
 
@@ -43,7 +46,9 @@ public class HeaderPage extends BasePage {
         wait.until(ExpectedConditions.visibilityOf(wishListButton));
         return wishListButton;
     }
-
+    public WebElement getCheckoutButton() {
+        return checkoutButton;
+    }
     public WebElement getLoginButton() {
         return driver.findElement(By.xpath(".//*[contains(@href,'login') and @class='list-group-item']"));
 

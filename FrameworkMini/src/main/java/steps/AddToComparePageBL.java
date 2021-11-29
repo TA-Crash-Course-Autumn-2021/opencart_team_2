@@ -18,6 +18,10 @@ public class AddToComparePageBL {
         addToComparePage.getAddToCompareButton().click();
         return this;
     }
+    public AddToComparePageBL clickOnAddToWishListButton() {
+        addToComparePage.getAddToWishListButton().click();
+        return this;
+    }
     public AddToComparePageBL clickOnIPhoneButton() {
         addToComparePage.getIPhoneButton().click();
         return this;
@@ -52,6 +56,23 @@ public class AddToComparePageBL {
     }
     public AddToComparePageBL clickOnSamsungGalaxyTab101Button() {
         addToComparePage.getSamsungGalaxyTab101Button().click();
+        return this;
+    }
+    public AddToComparePageBL clickOnProductComparisonMac(){
+        addToComparePage.getProductComparisonMac().click();
+        return this;
+    }
+    public AddToComparePageBL clickOnProductComparisonIPhone(){
+        addToComparePage.getProductComparisonIPhone().click();
+        return this;
+    }
+    public AddToComparePageBL clickOnAddToShoppingCartButton(){
+        addToComparePage.getAddToShoppingCart().click();
+        return this;
+    }
+
+    public AddToComparePageBL clickOnRemoveButton(){
+        addToComparePage.getRemoveBottom().click();
         return this;
     }
     public void verifyAddCanonEOS5D() {

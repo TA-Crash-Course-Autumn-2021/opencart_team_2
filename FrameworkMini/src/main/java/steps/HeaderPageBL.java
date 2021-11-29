@@ -1,11 +1,7 @@
 package steps;
 
-import models.LoginModel;
 import org.openqa.selenium.Keys;
 import pages.HeaderPage;
-import pages.SearchPage;
-import pages.SuccessLoginOpenWishList;
-import repository.LoginModelRepository;
 
 public class HeaderPageBL {
 
@@ -58,15 +54,21 @@ public class HeaderPageBL {
         headerPage.getRegisterButton().click();
         return new RegisterPageBL();
     }
-
+    public WishListPageBL clickWishListButton(){
+        headerPage.getWishListButton().click();
+        return new WishListPageBL();
+    }
     public HeaderPageBL clickOnWishListButton() {
         headerPage.getWishListButton().click();
         return this;
     }
-    public WishListPageBL clickOnLoginButton() {
+    public LoginUserByWishListPageBL clickOnLoginButton() {
         headerPage.getLoginButton().click();
-        return new WishListPageBL();
+        return new LoginUserByWishListPageBL();
     }
-
+    public CheckoutPageBL clickOnCheckoutButton() {
+        headerPage.getCheckoutButton().click();
+        return new CheckoutPageBL();
+    }
 }
 

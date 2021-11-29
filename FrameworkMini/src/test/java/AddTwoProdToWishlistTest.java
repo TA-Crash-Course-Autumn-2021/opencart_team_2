@@ -2,7 +2,7 @@ import navigation.Navigation;
 import org.testng.annotations.Test;
 import steps.AddToWishListPageBL;
 import steps.MainPageBL;
-import steps.WishListPageBL;
+import steps.LoginUserByWishListPageBL;
 
 import static enums.URLs.BASE_URL;
 
@@ -12,7 +12,7 @@ public class AddTwoProdToWishlistTest extends BaseTest {
         public void loginUserWithInWishListPage() {
             new Navigation().navigateToUrl(BASE_URL.getValue());
             MainPageBL mainPageBL = new MainPageBL();
-            WishListPageBL wishListPageBL = mainPageBL.getHeaderPageBL()
+            LoginUserByWishListPageBL wishListPageBL = mainPageBL.getHeaderPageBL()
                 .clickOnWishListButton()
                 .clickOnLoginButton()
                 .loginPerson();

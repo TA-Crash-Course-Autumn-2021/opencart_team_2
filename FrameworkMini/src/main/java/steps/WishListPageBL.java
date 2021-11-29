@@ -1,46 +1,34 @@
 package steps;
 
-import models.LoginModel;
 import org.testng.Assert;
-import pages.SuccessLoginOpenWishList;
 import pages.WishListPage;
-import repository.LoginModelRepository;
 
 public class WishListPageBL {
     private WishListPage wishListPage;
-    private SuccessLoginOpenWishList successLoginOpenWishList;
-
     public WishListPageBL() {
         wishListPage = new WishListPage();
     }
-    public WishListPageBL loginPerson() {
-        LoginModel loginModel = LoginModelRepository.getLoginModel();
-        inputEmail(loginModel.getEmail());
-        inputPassword(loginModel.getPassword());
-        clickOnLoginButton();
-
-        successLoginOpenWishList = new SuccessLoginOpenWishList();
+    public WishListPageBL clickOnButtonAddToCartMacBook(){
+        wishListPage.getButtonAddToCartMacBook().click();
+        return this;
+    }
+    public WishListPageBL clickOnButtonAddToCartIPhone(){
+        wishListPage.getButtonAddToCartIPhoneButton().click();
+        return this;
+    }
+    public WishListPageBL clickOnButtonAddToCartSamsungSyncMaster941BW(){
+        wishListPage.getButtonAddToCartSamsungSyncMaster941BW().click();
+        return this;
+    }
+    public WishListPageBL clickOnButtonShoppingCart(){
+        wishListPage.getShoppingCartButton().click();
         return this;
     }
 
-    private void inputEmail(String email) {
-        wishListPage.getEmailInput().clear();
-        wishListPage.getEmailInput().sendKeys(email);
+    public WishListPageBL verifyAddProductButton(String Product) {
+        String expectedMessage = "Success";
+        Assert.assertTrue(wishListPage.getAlertSuccessAdd().getText().contains(expectedMessage), "Failed to add item to cart");
+        Assert.assertTrue(wishListPage.getAlertSuccessAdd().getText().contains(Product), "Other item");
+        return this;
     }
-
-    private void inputPassword(String password) {
-        wishListPage.getPasswordInput().clear();
-        wishListPage.getPasswordInput().sendKeys(password);
-
-    }
-
-    private void clickOnLoginButton() {
-        wishListPage.getLoginButton().click();
-    }
-
-    public void verifyLoginInWishList() {
-        String expectedMessage = "My Account";
-        Assert.assertEquals(successLoginOpenWishList.getOpenWishList().getText(), expectedMessage, "Incorrect page title");
-    }
-
 }
