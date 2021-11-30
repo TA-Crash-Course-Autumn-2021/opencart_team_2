@@ -1,7 +1,7 @@
 package steps;
 
 import org.testng.Assert;
-import pages.Search_AddToWishListPage;
+import pages.search.Search_AddToWishListPage;
 
 public class AddToWishListPageBL {
     private Search_AddToWishListPage search_AddToWishListPage;

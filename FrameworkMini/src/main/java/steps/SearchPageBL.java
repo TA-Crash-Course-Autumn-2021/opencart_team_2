@@ -1,7 +1,11 @@
 package steps;
 
 import org.testng.Assert;
-import pages.SearchPage;
+import pages.containers.CurrenciesContainer;
+import pages.containers.ProductContainer;
+import pages.search.SearchPage;
+import steps.administration.currencies.EditCurrenciesPageBL;
+import steps.products.AppleCinemaPageBL;
 import util.DriverUtils;
 
 public class SearchPageBL {
@@ -89,24 +93,14 @@ public class SearchPageBL {
         return this;
     }
 
-    //////////////////////////////////////Add to cart button and verify alert////////////////////////////////////////////////////////
-    public SearchPageBL clickOnAddToCartHTCTouchHDButton() {
-        searchPage.getAddToCartHTCTouchHD().click();
-        return this;
-    }
+   public SearchPageBL clickOnAddToCart(String productTitle) {
+        ProductContainer product = searchPage.getProducts()
+                    .stream()
+                    .filter(e -> e.getTitleProduct().equals(productTitle))
+                    .findFirst()
+                    .orElseThrow(NumberFormatException::new);
 
-    public SearchPageBL clickOnAddToCartMacBookAirButton() {
-        searchPage.getAddToCartMacBookAirButton().click();
-        return this;
-    }
-
-    public SearchPageBL clickOnAddToCartMacBookButton() {
-        searchPage.getAddToCartMacBookButton().click();
-        return this;
-    }
-
-    public SearchPageBL clickOnAddToCartSamsungSyncMaster941BWButton() {
-        searchPage.getAddToCartSamsungSyncMaster941BWButton().click();
+        product.getAddToCartButton().click();
         return this;
     }
 

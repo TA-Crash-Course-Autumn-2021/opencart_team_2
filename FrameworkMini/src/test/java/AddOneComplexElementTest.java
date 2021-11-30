@@ -1,8 +1,8 @@
 import navigation.Navigation;
 import org.testng.annotations.Test;
-import steps.AppleCinemaPageBL;
 import steps.MainPageBL;
 import steps.MiniCartPageBL;
+import steps.products.AppleCinemaPageBL;
 
 import static enums.URLs.BASE_URL;
 
@@ -12,10 +12,7 @@ public class AddOneComplexElementTest extends BaseTest {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Apple Cinema")
-                .sendKeysSearchENTER()
+                .inputSearchAddToCart("Apple Cinema")
                 .clickOnAddToCartAppleCinema30()
                 .registerAppleCinema();
 

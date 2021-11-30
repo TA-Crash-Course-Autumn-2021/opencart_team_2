@@ -1,8 +1,8 @@
 import navigation.Navigation;
 import org.testng.annotations.Test;
-import steps.AddToComparePageBL;
 import steps.MainPageBL;
-import steps.LoginUserByWishListPageBL;
+import steps.menu.AddToComparePageBL;
+import steps.user.LoginUserByWishListPageBL;
 
 import static enums.URLs.BASE_URL;
 

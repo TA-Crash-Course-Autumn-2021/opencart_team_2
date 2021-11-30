@@ -3,6 +3,9 @@ package steps;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import pages.HeaderPage;
+import steps.menu.AddToComparePageBL;
+import steps.user.LoginUserByWishListPageBL;
+import steps.user.RegisterPageBL;
 
 public class HeaderPageBL {
 
@@ -12,37 +15,31 @@ public class HeaderPageBL {
         headerPage = new HeaderPage();
     }
 
-    public HeaderPageBL clickSearch() {
-        headerPage.getSearch().click();
-        return this;
-    }
-
     public SearchPageBL clickSearchHeaderButton() {
         headerPage.getButtonSearchHeader().click();
         return new SearchPageBL();
     }
 
-    public HeaderPageBL clearSearch() {
+    public SearchPageBL inputSearchAddToCart(String keyWords) {
+        headerPage.getSearch().click();
         headerPage.getSearch().clear();
-        return this;
-    }
-
-    public HeaderPageBL sendKeysSearch(String keyWords) {
         headerPage.getSearch().sendKeys(keyWords);
-        return this;
-    }
-
-    public SearchPageBL sendKeysSearchENTER() {
         headerPage.getSearch().sendKeys(Keys.ENTER);
         return new SearchPageBL();
     }
 
-    public AddToWishListPageBL sendKeysSearchProdENTER() {
+    public AddToWishListPageBL inputSearchWishList(String keyWords) {
+        headerPage.getSearch().click();
+        headerPage.getSearch().clear();
+        headerPage.getSearch().sendKeys(keyWords);
         headerPage.getSearch().sendKeys(Keys.ENTER);
         return new AddToWishListPageBL();
     }
 
-    public AddToComparePageBL sendKeysSearchForCompareProdENTER() {
+    public AddToComparePageBL inputSearchCompare(String keyWords) {
+        headerPage.getSearch().click();
+        headerPage.getSearch().clear();
+        headerPage.getSearch().sendKeys(keyWords);
         headerPage.getSearch().sendKeys(Keys.ENTER);
         return new AddToComparePageBL();
     }
@@ -56,10 +53,12 @@ public class HeaderPageBL {
         headerPage.getRegisterButton().click();
         return new RegisterPageBL();
     }
+
     public WishListPageBL clickWishListButton(){
         headerPage.getWishListButton().click();
         return new WishListPageBL();
     }
+
     public HeaderPageBL clickOnWishListButton() {
         headerPage.getWishListButton().click();
         return this;

@@ -1,7 +1,7 @@
 import navigation.Navigation;
 import org.testng.annotations.Test;
-import steps.AddToComparePageBL;
 import steps.MainPageBL;
+import steps.menu.AddToComparePageBL;
 
 import static enums.URLs.BASE_URL;
 
@@ -19,10 +19,7 @@ public class AddTwoProdToCompareTest extends BaseTest{
 
 
         mainPageBL.getHeaderPageBL()
-                .clearSearch()
-                .clickSearch()
-                .sendKeysSearch("Canon")
-                .sendKeysSearchForCompareProdENTER()
+                .inputSearchCompare("Canon")
                 .clickOnCanonEOS5DButton()
                 .clickOnAddToCompareButton();
         addToComparePageBL.verifyAddCanonEOS5D();

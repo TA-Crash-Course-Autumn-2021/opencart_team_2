@@ -2,7 +2,7 @@ import navigation.Navigation;
 import org.testng.annotations.Test;
 import steps.AddToWishListPageBL;
 import steps.MainPageBL;
-import steps.LoginUserByWishListPageBL;
+import steps.user.LoginUserByWishListPageBL;
 
 import static enums.URLs.BASE_URL;
 
@@ -17,42 +17,29 @@ public class AddFourProdToWishlistTest extends BaseTest {
                 .loginPerson();
         wishListPageBL.verifyLoginInWishList();
     }
+
     @Test
     public void searchElementAndAddToWishlist() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         AddToWishListPageBL addToWishListPageBL = mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Mac")
-                .sendKeysSearchProdENTER()
+                .inputSearchWishList("Mac")
                 .clickOnAddToWishListMacBookButton();
 
         addToWishListPageBL.verifyAddMacBook();
         mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("iPhone")
-                .sendKeysSearchProdENTER()
+                .inputSearchWishList("iPhone")
                 .clickOnAddToWishListIPhoneButton();
         addToWishListPageBL.verifyAddIPhone();
 
         mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Samsung")
-                .sendKeysSearchProdENTER()
+                .inputSearchWishList("Samsung")
                 .clickOnAddToWishListSamsungSyncMaster941BWButton();
         addToWishListPageBL.verifyAddSamsungSyncMaster941BWButton();
 
         mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Canon")
-                .sendKeysSearchProdENTER()
+                .inputSearchWishList("Canon")
                 .clickOnAddToWishListCanonEOS5DButton();
         addToWishListPageBL.verifyAddCanonEOS5D();
-
-
     }
 }

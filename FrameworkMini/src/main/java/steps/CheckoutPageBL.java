@@ -4,7 +4,7 @@ import models.CheckoutModel;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.CheckoutPage;
-import pages.SuccessCheckoutPage;
+import pages.success.SuccessCheckoutPage;
 import repository.CheckoutModelRepository;
 import util.DriverUtils;
 
