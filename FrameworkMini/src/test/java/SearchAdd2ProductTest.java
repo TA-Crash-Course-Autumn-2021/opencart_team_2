@@ -12,18 +12,12 @@ public class SearchAdd2ProductTest extends BaseTest {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Mac")
-                .sendKeysSearchENTER()
+                .inputSearchAddToCart("Mac")
                 .clickOnAddToCartMacBookButton();
         searchPageBL.verifyAddProductButton("MacBook");
 
         mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Samsung")
-                .sendKeysSearchENTER()
+                .inputSearchAddToCart("Samsung")
                 .clickOnAddToCartSamsungSyncMaster941BWButton();
         searchPageBL.verifyAddProductButton("Samsung SyncMaster 941BW");
 

@@ -19,10 +19,7 @@ public class AddTwoProdToCompareTest extends BaseTest{
 
 
         mainPageBL.getHeaderPageBL()
-                .clearSearch()
-                .clickSearch()
-                .sendKeysSearch("Canon")
-                .sendKeysSearchForCompareProdENTER()
+                .inputSearchCompare("Canon")
                 .clickOnCanonEOS5DButton()
                 .clickOnAddToCompareButton();
         addToComparePageBL.verifyAddCanonEOS5D();

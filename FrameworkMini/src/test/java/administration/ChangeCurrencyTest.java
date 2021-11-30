@@ -17,10 +17,7 @@ public class ChangeCurrencyTest extends AdminBaseTest {
                 .clickOnUAHButton()
                 .verifyMacBookPrice()
                 .verifyMacBookTax()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Mac")
-                .sendKeysSearchENTER()
+                .inputSearchAddToCart("Mac")
                 .verifyiMacPrice()
                 .verifyiMacTax();
 

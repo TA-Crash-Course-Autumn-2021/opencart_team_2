@@ -27,10 +27,7 @@ public class OrderTreeProdUsingWishlistAsLogUserTest extends StoriesBaseTest {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         AddToWishListPageBL addToWishListPageBL = mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Mac")
-                .sendKeysSearchProdENTER()
+                .inputSearchWishList("Mac")
                 .clickOnAddToWishListMacBookButton();
         addToWishListPageBL.verifyAddMacBook();
 
@@ -38,18 +35,15 @@ public class OrderTreeProdUsingWishlistAsLogUserTest extends StoriesBaseTest {
                 .clickWishListButton()
                 .clickOnButtonAddToCartMacBook()
                 .verifyAddProductButton("MacBook");
-
     }
+
     @Test
     public void searchElementAndAddToWishlist2() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         AddToWishListPageBL addToWishListPageBL =
                 mainPageBL.getHeaderPageBL()
-                        .clickSearch()
-                        .clearSearch()
-                        .sendKeysSearch("iPhone")
-                        .sendKeysSearchProdENTER()
+                        .inputSearchWishList("iPhone")
                         .clickOnAddToWishListIPhoneButton();
         addToWishListPageBL.verifyAddIPhone();
 
@@ -65,10 +59,7 @@ public class OrderTreeProdUsingWishlistAsLogUserTest extends StoriesBaseTest {
         MainPageBL mainPageBL = new MainPageBL();
         AddToWishListPageBL addToWishListPageBL =
                 mainPageBL.getHeaderPageBL()
-                        .clickSearch()
-                        .clearSearch()
-                        .sendKeysSearch("Samsung")
-                        .sendKeysSearchProdENTER()
+                        .inputSearchWishList("Samsung")
                         .clickOnAddToWishListSamsungSyncMaster941BWButton();
         addToWishListPageBL.verifyAddSamsungSyncMaster941BWButton();
 
@@ -91,6 +82,5 @@ public class OrderTreeProdUsingWishlistAsLogUserTest extends StoriesBaseTest {
                 .checkoutPersonStep6();
 
         checkoutPageBL.verifyCheckout();
-
     }
 }

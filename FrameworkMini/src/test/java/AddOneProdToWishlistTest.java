@@ -22,10 +22,7 @@ public class AddOneProdToWishlistTest extends BaseTest {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         AddToWishListPageBL addToWishListPageBL = mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Mac")
-                .sendKeysSearchProdENTER()
+                .inputSearchWishList("Mac")
                 .clickOnAddToWishListMacBookButton();
 
         addToWishListPageBL.verifyAddMacBook();

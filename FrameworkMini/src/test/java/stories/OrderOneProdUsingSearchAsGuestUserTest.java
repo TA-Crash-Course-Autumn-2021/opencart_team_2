@@ -14,10 +14,7 @@ public class OrderOneProdUsingSearchAsGuestUserTest extends StoriesBaseTest {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Mac")
-                .sendKeysSearchENTER()
+                .inputSearchAddToCart("Mac")
                 .clickOnAddToCartMacBookAirButton();
         searchPageBL.verifyAddMacBookAir();
     }

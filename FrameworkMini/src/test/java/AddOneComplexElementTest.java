@@ -12,10 +12,7 @@ public class AddOneComplexElementTest extends BaseTest {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Apple Cinema")
-                .sendKeysSearchENTER()
+                .inputSearchAddToCart("Apple Cinema")
                 .clickOnAddToCartAppleCinema30()
                 .registerAppleCinema();
 

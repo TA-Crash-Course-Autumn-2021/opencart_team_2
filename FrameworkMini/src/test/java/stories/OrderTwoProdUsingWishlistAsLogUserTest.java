@@ -27,10 +27,7 @@ public class OrderTwoProdUsingWishlistAsLogUserTest extends StoriesBaseTest{
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         AddToWishListPageBL addToWishListPageBL = mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Mac")
-                .sendKeysSearchProdENTER()
+                .inputSearchWishList("Mac")
                 .clickOnAddToWishListMacBookButton();
         addToWishListPageBL.verifyAddMacBook();
 
@@ -38,19 +35,16 @@ public class OrderTwoProdUsingWishlistAsLogUserTest extends StoriesBaseTest{
                 .clickWishListButton()
                 .clickOnButtonAddToCartMacBook()
                 .verifyAddProductButton("MacBook");
-
     }
+
     @Test
     public void searchElementAndAddToWishlist2() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         AddToWishListPageBL addToWishListPageBL =
                 mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("iPhone")
-                .sendKeysSearchProdENTER()
-                .clickOnAddToWishListIPhoneButton();
+                        .inputSearchWishList("iPhone")
+                        .clickOnAddToWishListIPhoneButton();
         addToWishListPageBL.verifyAddIPhone();
 
         WishListPageBL wishListPageBL = mainPageBL.getHeaderPageBL()

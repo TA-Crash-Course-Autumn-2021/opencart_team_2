@@ -11,55 +11,37 @@ public class AddSixProdToCompareTest extends BaseTest{
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         AddToComparePageBL addToComparePageBL = mainPageBL.getHeaderPageBL()
-                .clearSearch()
-                .clickSearch()
-                .sendKeysSearch("Iphone")
-                .sendKeysSearchForCompareProdENTER()
+                .inputSearchCompare("Iphone")
                 .clickOnIPhoneButton()
                 .clickOnAddToCompareButton();
         addToComparePageBL.verifyAddIPhone();
 
         mainPageBL.getHeaderPageBL()
-                .clearSearch()
-                .clickSearch()
-                .sendKeysSearch("Canon")
-                .sendKeysSearchForCompareProdENTER()
+                .inputSearchCompare("Canon")
                 .clickOnCanonEOS5DButton()
                 .clickOnAddToCompareButton();
         addToComparePageBL.verifyAddCanonEOS5D();
 
         mainPageBL.getHeaderPageBL()
-                .clearSearch()
-                .clickSearch()
-                .sendKeysSearch("Samsung")
-                .sendKeysSearchForCompareProdENTER()
+                .inputSearchCompare("Samsung")
                 .clickOnSamsungSyncMaster941BWButton()
                 .clickOnAddToCompareButton();
         addToComparePageBL.verifyAddSamsungSyncMaster941BW();
 
         mainPageBL.getHeaderPageBL()
-                .clearSearch()
-                .clickSearch()
-                .sendKeysSearch("MacBook")
-                .sendKeysSearchForCompareProdENTER()
+                .inputSearchCompare("MacBook")
                 .clickOnMacBookButton()
                 .clickOnAddToCompareButton();
         addToComparePageBL.verifyAddMacBook();
 
         mainPageBL.getHeaderPageBL()
-                .clearSearch()
-                .clickSearch()
-                .sendKeysSearch("MacBook")
-                .sendKeysSearchForCompareProdENTER()
+                .inputSearchCompare("MacBook")
                 .clickOnMacBookAirButton()
                 .clickOnAddToCompareButton();
         addToComparePageBL.verifyAddMacAir();
 
         mainPageBL.getHeaderPageBL()
-                .clearSearch()
-                .clickSearch()
-                .sendKeysSearch("iPod")
-                .sendKeysSearchForCompareProdENTER()
+                .inputSearchCompare("iPod")
                 .clickOnIPodClassicButton()
                 .clickOnAddToCompareButton();
         addToComparePageBL.verifyAddIPodClassic();
