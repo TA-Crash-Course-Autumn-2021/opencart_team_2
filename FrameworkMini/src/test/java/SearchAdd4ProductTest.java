@@ -14,17 +14,17 @@ public class SearchAdd4ProductTest extends BaseTest {
         MainPageBL mainPageBL = new MainPageBL();
         SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
                 .inputSearchAddToCart("Mac")
-                .clickOnAddToCartMacBookAirButton();
+                .clickOnAddToCart("MacBook Air");
         searchPageBL.verifyAddProductButton("MacBook Air");
 
         mainPageBL.getHeaderPageBL()
                 .inputSearchAddToCart("Mac")
-                .clickOnAddToCartMacBookButton();
+                .clickOnAddToCart("MacBook");
         searchPageBL.verifyAddProductButton("MacBook");
 
         mainPageBL.getHeaderPageBL()
                 .inputSearchAddToCart("Samsung")
-                .clickOnAddToCartSamsungSyncMaster941BWButton();
+                .clickOnAddToCart("Samsung SyncMaster 941BW");
         searchPageBL.verifyAddProductButton("Samsung SyncMaster 941BW");
 
         mainPageBL.getHeaderPageBL()

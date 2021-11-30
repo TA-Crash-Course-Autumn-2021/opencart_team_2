@@ -27,12 +27,12 @@ public class OrderTwoProdUsingSearchAsLogUserTest extends StoriesBaseTest{
         MainPageBL mainPageBL = new MainPageBL();
         SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
                 .inputSearchAddToCart("Mac")
-                .clickOnAddToCartMacBookAirButton();
+                .clickOnAddToCart("MacBook Air");
         searchPageBL.verifyAddMacBookAir();
 
         mainPageBL.getHeaderPageBL()
                 .inputSearchAddToCart("Samsung")
-                .clickOnAddToCartSamsungSyncMaster941BWButton();
+                .clickOnAddToCart("Samsung SyncMaster 941BW");
         searchPageBL.verifyAddSamsungSyncMaster941BWButton();
     }
 

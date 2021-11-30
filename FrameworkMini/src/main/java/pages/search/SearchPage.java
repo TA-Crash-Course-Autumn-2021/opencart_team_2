@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
+import pages.containers.ProductContainer;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class SearchPage extends BasePage {
 
@@ -44,6 +48,9 @@ public class SearchPage extends BasePage {
 
     @FindBy(xpath = "//a[text()='iMac']/../following-sibling::p[@class='price']//span[@class='price-tax']")
     private WebElement taxiMac;
+
+    @FindBy(xpath = "//*[contains(@class, 'product-layout product-grid')]")
+    List<WebElement> products;
 
     public WebElement getTitleOfSearch() {
         return titleOfSearch;
@@ -95,40 +102,15 @@ public class SearchPage extends BasePage {
         return taxiMac;
     }
 
-    //////////////////////////////Add to Cart Buttons/////////////////////////////////////////////////////
-    @FindBy(xpath = "//img[@title = 'HTC Touch HD']/../../../div//div[@class='button-group']//button[contains(@onclick,'cart.add')]")
-    private WebElement buttonAddToCartHTCTouchHD;
-
-    @FindBy(xpath = "//img[@title = 'MacBook Air']/../../../div//div[@class='button-group']//button[contains(@onclick,'cart.add')]")
-    private WebElement buttonAddToCartMacBookAir;
-
-    @FindBy(xpath = "//img[@title = 'MacBook']/../../../div//div[@class='button-group']//button[text()]")
-    private WebElement buttonAddToCartMacBook;
-
-    @FindBy(xpath = "//img[@title = 'Samsung SyncMaster 941BW']/../../../div//div[@class='button-group']//button[text()]")
-    private WebElement buttonAddToCartSamsungSyncMaster941BW;
+    public List<ProductContainer> getProducts() {
+        return products.stream().map(ProductContainer::new).collect(Collectors.toList());
+    }
 
     @FindBy(xpath = "//img[contains(@title, 'Apple Cinema 30')]/../../../div//div[@class='button-group']//button[contains(@onclick,'cart.add')]")
     private WebElement buttonAddAppleCinema30;
 
     @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
     private WebElement alertSuccessAdd;
-
-    public WebElement getAddToCartHTCTouchHD() {
-        return buttonAddToCartHTCTouchHD;
-    }
-
-    public WebElement getAddToCartMacBookAirButton() {
-        return buttonAddToCartMacBookAir;
-    }
-
-    public WebElement getAddToCartMacBookButton() {
-        return buttonAddToCartMacBook;
-    }
-
-    public WebElement getAddToCartSamsungSyncMaster941BWButton() {
-        return buttonAddToCartSamsungSyncMaster941BW;
-    }
 
     public WebElement getAddToCartAppleCinema30() {
         return buttonAddAppleCinema30;

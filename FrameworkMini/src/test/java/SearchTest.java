@@ -18,7 +18,7 @@ public class SearchTest extends BaseTest {
         searchPageBL.verifySearchProductTitle("HTC Touch HD");
         searchPageBL.verifyMeetingTitle();
         searchPageBL
-                .clickOnAddToCartHTCTouchHDButton()
+                .clickOnAddToCart("HTC Touch HD")
                 .verifyAddProductButton("HTC Touch HD");
     }
 

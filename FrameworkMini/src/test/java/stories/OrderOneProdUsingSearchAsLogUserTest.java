@@ -27,7 +27,7 @@ public class OrderOneProdUsingSearchAsLogUserTest extends StoriesBaseTest {
         MainPageBL mainPageBL = new MainPageBL();
         SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
                 .inputSearchAddToCart("Mac")
-                .clickOnAddToCartMacBookAirButton();
+                .clickOnAddToCart("MacBook Air");
         searchPageBL.verifyAddMacBook();
     }
 
