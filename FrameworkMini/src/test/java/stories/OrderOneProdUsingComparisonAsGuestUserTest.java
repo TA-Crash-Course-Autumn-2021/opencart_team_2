@@ -1,6 +1,7 @@
 package stories;
 
 import navigation.Navigation;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import steps.CheckoutPageBL;
 import steps.MainPageBL;
