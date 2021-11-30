@@ -1,7 +1,8 @@
 package steps;
 
 import org.testng.Assert;
-import pages.SearchPage;
+import pages.search.SearchPage;
+import steps.products.AppleCinemaPageBL;
 import util.DriverUtils;
 
 public class SearchPageBL {

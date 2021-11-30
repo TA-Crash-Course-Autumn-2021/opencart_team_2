@@ -3,6 +3,9 @@ package steps;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import pages.HeaderPage;
+import steps.menu.AddToComparePageBL;
+import steps.user.LoginUserByWishListPageBL;
+import steps.user.RegisterPageBL;
 
 public class HeaderPageBL {
 

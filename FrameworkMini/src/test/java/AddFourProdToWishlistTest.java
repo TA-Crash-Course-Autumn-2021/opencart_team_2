@@ -2,7 +2,7 @@ import navigation.Navigation;
 import org.testng.annotations.Test;
 import steps.AddToWishListPageBL;
 import steps.MainPageBL;
-import steps.LoginUserByWishListPageBL;
+import steps.user.LoginUserByWishListPageBL;
 
 import static enums.URLs.BASE_URL;
 

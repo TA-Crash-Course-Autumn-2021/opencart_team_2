@@ -1,9 +1,9 @@
 import navigation.Navigation;
 import org.testng.annotations.Test;
-import steps.AppleCinemaPageBL;
 import steps.MainPageBL;
 import steps.MiniCartPageBL;
 import steps.SearchPageBL;
+import steps.products.AppleCinemaPageBL;
 
 import static enums.URLs.BASE_URL;
 

@@ -1,7 +1,7 @@
 import navigation.Navigation;
 import org.testng.annotations.Test;
 import steps.MainPageBL;
-import steps.RegisterPageBL;
+import steps.user.RegisterPageBL;
 
 import static enums.URLs.BASE_URL;
 
