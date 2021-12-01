@@ -189,4 +189,11 @@ public class CheckoutPage extends BasePage{
         return emailInput;
     }
 
+    @FindBy(xpath = "//*[text()='Carbon tax:']")
+    private WebElement newTax;
+
+    public WebElement getNewTax() {
+        wait.until(ExpectedConditions.visibilityOf(newTax));
+        return newTax;
+    }
 }

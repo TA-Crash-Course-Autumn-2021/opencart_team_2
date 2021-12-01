@@ -4,7 +4,7 @@ import models.CheckoutModel;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.CheckoutPage;
-import pages.SuccessCheckoutPage;
+import pages.success.SuccessCheckoutPage;
 import repository.CheckoutModelRepository;
 import util.DriverUtils;
 
@@ -50,6 +50,7 @@ public class CheckoutPageBL {
         clickOnContinue5Button();
         return this;
     }
+
     public CheckoutPageBL checkoutPersonStep6() {
         clickOnConfirmOrderButton();
         try {
@@ -185,5 +186,10 @@ public class CheckoutPageBL {
     public void verifyCheckout() {
         String expectedMessage = "Your order has been placed!";
         Assert.assertEquals(successCheckoutPage.getSuccessTitle2().getText(), expectedMessage, "Incorrect page title");
+    }
+
+    public void verifyNewTax() {
+        String expectedMessage = "Carbon tax:";
+        Assert.assertEquals(checkoutPage.getNewTax().getText(), expectedMessage, "Incorrect tax");
     }
 }

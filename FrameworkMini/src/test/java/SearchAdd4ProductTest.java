@@ -1,9 +1,9 @@
 import navigation.Navigation;
 import org.testng.annotations.Test;
-import steps.AppleCinemaPageBL;
 import steps.MainPageBL;
 import steps.MiniCartPageBL;
 import steps.SearchPageBL;
+import steps.products.AppleCinemaPageBL;
 
 import static enums.URLs.BASE_URL;
 
@@ -13,34 +13,22 @@ public class SearchAdd4ProductTest extends BaseTest {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Mac")
-                .sendKeysSearchENTER()
-                .clickOnAddToCartMacBookAirButton();
+                .inputSearchAddToCart("Mac")
+                .clickOnAddToCart("MacBook Air");
         searchPageBL.verifyAddProductButton("MacBook Air");
 
         mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Mac")
-                .sendKeysSearchENTER()
-                .clickOnAddToCartMacBookButton();
+                .inputSearchAddToCart("Mac")
+                .clickOnAddToCart("MacBook");
         searchPageBL.verifyAddProductButton("MacBook");
 
         mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Samsung")
-                .sendKeysSearchENTER()
-                .clickOnAddToCartSamsungSyncMaster941BWButton();
+                .inputSearchAddToCart("Samsung")
+                .clickOnAddToCart("Samsung SyncMaster 941BW");
         searchPageBL.verifyAddProductButton("Samsung SyncMaster 941BW");
 
         mainPageBL.getHeaderPageBL()
-                .clickSearch()
-                .clearSearch()
-                .sendKeysSearch("Apple Cinema")
-                .sendKeysSearchENTER()
+                .inputSearchAddToCart("Apple Cinema")
                 .clickOnAddToCartAppleCinema30()
                 .registerAppleCinema();
         AppleCinemaPageBL appleCinemaPage = new AppleCinemaPageBL();
