@@ -23,7 +23,7 @@ public class OrderTwoProdUsingSearchAsLogUserTest extends StoriesBaseTest{
     }
 
     @Test
-    public void searchElementAndAddToCard() {
+    public void searchElementAndAddToCardAndCheckoutPerson() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
@@ -35,12 +35,7 @@ public class OrderTwoProdUsingSearchAsLogUserTest extends StoriesBaseTest{
                 .inputSearchAddToCart("Samsung")
                 .clickOnAddToCart("Samsung SyncMaster 941BW");
         searchPageBL.verifyAddSamsungSyncMaster941BWButton();
-    }
 
-    @Test
-    public void stepCheckoutPerson(){
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()
                 .clickOnCheckoutButton()
                 .checkoutPersonStep2()
@@ -50,6 +45,6 @@ public class OrderTwoProdUsingSearchAsLogUserTest extends StoriesBaseTest{
                 .checkoutPersonStep6();
 
         checkoutPageBL.verifyCheckout();
-
     }
+
 }

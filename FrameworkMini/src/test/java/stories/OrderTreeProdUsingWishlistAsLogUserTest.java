@@ -36,44 +36,27 @@ public class OrderTreeProdUsingWishlistAsLogUserTest extends StoriesBaseTest {
                 .clickWishListButton()
                 .clickOnButtonAddToCartMacBook()
                 .verifyAddProductButton("MacBook");
-    }
 
-    @Test
-    public void searchElementAndAddToWishlist2() {
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
-        AddToWishListPageBL addToWishListPageBL =
-                mainPageBL.getHeaderPageBL()
-                        .inputSearchWishList("iPhone")
-                        .clickOnAddToWishListIPhoneButton();
+        mainPageBL.getHeaderPageBL()
+                .inputSearchWishList("iPhone")
+                .clickOnAddToWishListIPhoneButton();
         addToWishListPageBL.verifyAddIPhone();
 
-        WishListPageBL wishListPageBL = mainPageBL.getHeaderPageBL()
+        mainPageBL.getHeaderPageBL()
                 .clickWishListButton()
                 .clickOnButtonAddToCartIPhone()
                 .verifyAddProductButton("iPhone");
-    }
 
-    @Test
-    public void searchElementAndAddToWishlist3() {
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
-        AddToWishListPageBL addToWishListPageBL =
-                mainPageBL.getHeaderPageBL()
-                        .inputSearchWishList("Samsung")
-                        .clickOnAddToWishListSamsungSyncMaster941BWButton();
+        mainPageBL.getHeaderPageBL()
+                .inputSearchWishList("Samsung")
+                .clickOnAddToWishListSamsungSyncMaster941BWButton();
         addToWishListPageBL.verifyAddSamsungSyncMaster941BWButton();
 
         mainPageBL.getHeaderPageBL()
                 .clickWishListButton()
                 .clickOnButtonAddToCartSamsungSyncMaster941BW()
                 .verifyAddProductButton("Samsung SyncMaster 941BW");
-    }
 
-    @Test
-    public void stepCheckoutPerson(){
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()
                 .clickOnCheckoutButton()
                 .checkoutPersonStep2()
@@ -84,4 +67,6 @@ public class OrderTreeProdUsingWishlistAsLogUserTest extends StoriesBaseTest {
 
         checkoutPageBL.verifyCheckout();
     }
+
+
 }

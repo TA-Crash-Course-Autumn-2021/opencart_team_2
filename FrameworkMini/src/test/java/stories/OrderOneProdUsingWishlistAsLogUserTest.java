@@ -24,7 +24,7 @@ public class OrderOneProdUsingWishlistAsLogUserTest extends StoriesBaseTest{
     }
 
     @Test
-    public void searchElementAndAddToWishlist() {
+    public void searchElementAndAddToWishlistAndCheckoutPerson() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         AddToWishListPageBL addToWishListPageBL = mainPageBL.getHeaderPageBL()
@@ -36,12 +36,7 @@ public class OrderOneProdUsingWishlistAsLogUserTest extends StoriesBaseTest{
                 .clickWishListButton()
                 .clickOnButtonAddToCartIPhone()
                 .verifyAddProductButton("iPhone");
-    }
 
-    @Test
-    public void stepCheckoutPerson(){
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()
                 .clickOnCheckoutButton()
                 .checkoutPersonStep2()

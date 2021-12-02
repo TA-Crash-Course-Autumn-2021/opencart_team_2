@@ -10,19 +10,14 @@ import static enums.URLs.BASE_URL;
 
 public class OrderOneProdUsingSearchAsGuestUserTest extends StoriesBaseTest {
     @Test
-    public void searchElementAndAddToCard() {
+    public void searchElementAndAddToCardAndCheckoutPerson() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
                 .inputSearchAddToCart("Mac")
                 .clickOnAddToCart("MacBook Air");
         searchPageBL.verifyAddMacBookAir();
-    }
 
-    @Test
-    public void searchEoCard(){
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()
                 .clickOnCheckoutButton()
                 .checkoutPersonStep1()
@@ -32,4 +27,6 @@ public class OrderOneProdUsingSearchAsGuestUserTest extends StoriesBaseTest {
                 .checkoutPersonStep6();
         checkoutPageBL.verifyCheckout();
     }
+
+    
 }

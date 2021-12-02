@@ -11,20 +11,6 @@ import steps.user.LoginUserByWishListPageBL;
 import static enums.URLs.BASE_URL;
 
 public class OrderOneProdUsingProdComparisonAsLogUserTest extends StoriesBaseTest {
-    @Test
-    public void searchByMenuAndAddToCompare() {
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
-        AddToComparePageBL addToComparePageBL = mainPageBL.getMenuPageBL()
-                .clickOnDesktopsButton()
-                .clickOnMacButtonAddToComparePage()
-                .clickOnIMacAirMenuButton()
-                .clickOnAddToCompareButton()
-                .clickOnProductComparisonMac()
-                .clickOnAddToShoppingCartButton();
-         addToComparePageBL.verifyAddIMac();
-    }
-
     @BeforeClass
     public void loginUserWithInWishListPage() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
@@ -37,9 +23,18 @@ public class OrderOneProdUsingProdComparisonAsLogUserTest extends StoriesBaseTes
     }
 
     @Test
-    public void stepCheckoutPerson(){
+    public void searchByMenuAndAddToCompareAndCheckoutPerson() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
+        AddToComparePageBL addToComparePageBL = mainPageBL.getMenuPageBL()
+                .clickOnDesktopsButton()
+                .clickOnMacButtonAddToComparePage()
+                .clickOnIMacAirMenuButton()
+                .clickOnAddToCompareButton()
+                .clickOnProductComparisonMac()
+                .clickOnAddToShoppingCartButton();
+         addToComparePageBL.verifyAddIMac();
+
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()
                 .clickOnCheckoutButton()
                 .checkoutPersonStep2()

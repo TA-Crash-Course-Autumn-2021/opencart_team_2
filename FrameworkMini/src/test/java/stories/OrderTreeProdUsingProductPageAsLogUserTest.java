@@ -21,7 +21,7 @@ public class OrderTreeProdUsingProductPageAsLogUserTest extends StoriesBaseTest 
         wishListPageBL.verifyLoginInWishList();
     }
     @Test
-    public void addProductToShoppingCartByProdPageTest() throws InterruptedException {
+    public void addProductToShoppingCartByProdPageTestAndCheckoutPerson() throws InterruptedException {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         mainPageBL.getMenuPageBL()
@@ -44,11 +44,6 @@ public class OrderTreeProdUsingProductPageAsLogUserTest extends StoriesBaseTest 
                 .clickOnAddToCartButton()
                 .verifyAddProductButton("Samsung SyncMaster 941BW");
 
-    }
-    @Test
-    public void stepCheckoutPerson(){
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()
                 .clickOnCheckoutButton()
                 .checkoutPersonStep2()
@@ -60,4 +55,5 @@ public class OrderTreeProdUsingProductPageAsLogUserTest extends StoriesBaseTest 
         checkoutPageBL.verifyCheckout();
 
     }
+
 }
