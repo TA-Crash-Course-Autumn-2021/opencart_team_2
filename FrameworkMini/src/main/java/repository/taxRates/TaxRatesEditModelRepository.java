@@ -7,12 +7,12 @@ public class TaxRatesEditModelRepository {
     private TaxRatesEditModelRepository() {
     }
 
-    public static TaxRatesModel getTaxRatesModel() {
+    public static TaxRatesModel getTaxRatesEditModel() {
         return TaxRatesModel.builder()
                 .taxName("Federal tax")
                 .taxRate("35.0000")
-                .type("P")
-                .geoZone("3")
+                .type("Percentage")
+                .geoZone("UK Shipping")
                 .build();
     }
 }

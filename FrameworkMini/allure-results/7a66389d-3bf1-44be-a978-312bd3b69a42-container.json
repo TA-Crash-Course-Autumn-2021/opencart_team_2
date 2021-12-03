@@ -1,0 +1,1 @@
+{"uuid":"7a66389d-3bf1-44be-a978-312bd3b69a42","name":"FrameworkMini","children":["fcca8dd7-8718-489d-ba8d-541719e331b6"],"befores":[{"name":"addNewTaxRatesEditTaxClassesEditProduct","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1638544472855,"stop":1638544493087}],"afters":[],"start":1638544472855,"stop":1638544507657}

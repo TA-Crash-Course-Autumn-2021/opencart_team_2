@@ -4,7 +4,6 @@ import org.testng.Assert;
 import pages.administration.currencies.CurrenciesPage;
 import pages.containers.CurrenciesContainer;
 
-
 public class CurrenciesPageBL {
     CurrenciesPage currenciesPage;
 

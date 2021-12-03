@@ -1,6 +1,5 @@
 package steps.administration.taxClass;
 
-
 import org.testng.Assert;
 import pages.administration.taxClass.TaxClassesPage;
 import pages.containers.TaxClassContainer;

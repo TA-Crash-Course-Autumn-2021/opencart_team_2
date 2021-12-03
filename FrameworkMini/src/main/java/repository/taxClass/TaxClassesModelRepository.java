@@ -11,7 +11,7 @@ public class TaxClassesModelRepository {
         return TaxClassesModel.builder()
                 .taxClassTitle("Sales Taxes")
                 .description("Sales taxes are taxes imposed as a percentage of firms’ sales")
-                .taxRate("86")
+                .taxRate("Eco Tax (-2.00)")
                 .basedOn("store")
                 .priority("1")
                 .build();

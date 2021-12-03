@@ -1,10 +1,8 @@
 package steps;
 
 import org.testng.Assert;
-import pages.containers.CurrenciesContainer;
 import pages.containers.ProductContainer;
 import pages.search.SearchPage;
-import steps.administration.currencies.EditCurrenciesPageBL;
 import steps.products.AppleCinemaPageBL;
 import util.DriverUtils;
 
@@ -55,7 +53,7 @@ public class SearchPageBL {
     }
 
     public void verifySearchProductTitle(String product) {
-        String expectedMessage = "Search - " + product ;
+        String expectedMessage = "Search - " + product;
         Assert.assertEquals(expectedMessage, searchPage.getTitleOfSearchProduct(product).getText(), "Incorrect page title");
     }
 
@@ -77,28 +75,28 @@ public class SearchPageBL {
     public String getPriceiMacStringType() {
         String withoutSymbol = searchPage.getPriceiMac().getText().replace(searchPage.getSymbolСurrentCurrency().getText(), "");
         String temp = searchPage.getTaxiMac().getText().replace(searchPage.getSymbolСurrentCurrency().getText(), "");
-        withoutSymbol = withoutSymbol.replace("\n","");
-        return withoutSymbol.replace(temp,"");
+        withoutSymbol = withoutSymbol.replace("\n", "");
+        return withoutSymbol.replace(temp, "");
     }
 
     public SearchPageBL verifyiMacPrice() {
-        String expectedMessage = "4.593";
-        Assert.assertTrue(this.getPriceiMacStringType().equals(expectedMessage), "Incorrect price iMac");
+        String expectedMessage = "3.95";
+        Assert.assertTrue(this.getPriceiMacStringType().contains(expectedMessage), "Incorrect price iMac");
         return this;
     }
 
     public SearchPageBL verifyiMacTax() {
-        String expectedMessage = "3.765";
-        Assert.assertTrue(this.getTaxiMacStringType().equals(expectedMessage), "Incorrect tax iMac");
+        String expectedMessage = "3.77";
+        Assert.assertTrue(this.getTaxiMacStringType().contains(expectedMessage), "Incorrect tax iMac");
         return this;
     }
 
-   public SearchPageBL clickOnAddToCart(String productTitle) {
+    public SearchPageBL clickOnAddToCart(String productTitle) {
         ProductContainer product = searchPage.getProducts()
-                    .stream()
-                    .filter(e -> e.getTitleProduct().equals(productTitle))
-                    .findFirst()
-                    .orElseThrow(NumberFormatException::new);
+                .stream()
+                .filter(e -> e.getTitleProduct().equals(productTitle))
+                .findFirst()
+                .orElseThrow(NumberFormatException::new);
 
         product.getAddToCartButton().click();
         return this;
@@ -114,6 +112,7 @@ public class SearchPageBL {
         Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(expectedMessage), "Failed to add item to cart");
         Assert.assertTrue(searchPage.getAlertSuccessAdd().getText().contains(product), "Other item");
     }
+
     public void verifyAddMacBookAir() {
         String expectedMessage = "Success";
         String nameItem = "MacBook Air";

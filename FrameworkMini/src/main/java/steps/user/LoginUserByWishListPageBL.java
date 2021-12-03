@@ -13,6 +13,7 @@ public class LoginUserByWishListPageBL {
     public LoginUserByWishListPageBL() {
         wishListPage = new LoginUserByWishListPage();
     }
+
     public LoginUserByWishListPageBL loginPerson() {
         LoginModel loginModel = LoginModelRepository.getLoginModel();
         inputEmail(loginModel.getEmail());

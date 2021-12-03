@@ -33,11 +33,13 @@ public class CheckoutPageBL {
         clickOnContinue2Button();
         return this;
     }
+
     public CheckoutPageBL checkoutPersonStep3() {
         clickOnChoose3Button();
         clickOnContinue3Button();
         return this;
     }
+
     public CheckoutPageBL checkoutPersonStep4() {
         clickOnChoose4Button();
         clickOnContinue4Button();
@@ -50,6 +52,7 @@ public class CheckoutPageBL {
         clickOnContinue5Button();
         return this;
     }
+
     public CheckoutPageBL checkoutPersonStep6() {
         clickOnConfirmOrderButton();
         try {
@@ -185,5 +188,10 @@ public class CheckoutPageBL {
     public void verifyCheckout() {
         String expectedMessage = "Your order has been placed!";
         Assert.assertEquals(successCheckoutPage.getSuccessTitle2().getText(), expectedMessage, "Incorrect page title");
+    }
+
+    public void verifyNewTax() {
+        String expectedMessage = "Carbon tax:";
+        Assert.assertEquals(checkoutPage.getNewTax().getText(), expectedMessage, "Incorrect tax");
     }
 }

@@ -1,6 +1,8 @@
 package steps.user;
 
+import models.AdministrationModel;
 import pages.user.LoginAdministrationPage;
+import repository.AdministrationModelRepository;
 import steps.administration.DashboardPageBL;
 
 public class LoginAdministrationPageBL {
@@ -11,22 +13,27 @@ public class LoginAdministrationPageBL {
         loginAdministrationPage = new LoginAdministrationPage();
     }
 
-    public LoginAdministrationPageBL inputUsername(String username) {
+    public DashboardPageBL registerAdmin() {
+        AdministrationModel administrationModel = AdministrationModelRepository.getAdministrationModel();
+        inputUsername(administrationModel.getUsername());
+        inputPassword(administrationModel.getPassword());
+        clickLoginButton();
+        return new DashboardPageBL();
+    }
+
+    private void inputUsername(String username) {
         loginAdministrationPage.getUsernameInput().click();
         loginAdministrationPage.getUsernameInput().clear();
         loginAdministrationPage.getUsernameInput().sendKeys(username);
-        return this;
     }
 
-    public LoginAdministrationPageBL inputPassword(String password) {
+    private void inputPassword(String password) {
         loginAdministrationPage.getPasswordInput().click();
         loginAdministrationPage.getPasswordInput().clear();
         loginAdministrationPage.getPasswordInput().sendKeys(password);
-        return this;
     }
 
-    public DashboardPageBL clickLoginButton() {
+    private void clickLoginButton() {
         loginAdministrationPage.getLoginButton().click();
-        return new DashboardPageBL();
     }
 }

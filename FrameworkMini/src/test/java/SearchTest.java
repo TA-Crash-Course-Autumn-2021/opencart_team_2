@@ -1,3 +1,5 @@
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import navigation.Navigation;
 import org.testng.annotations.Test;
 import steps.MainPageBL;
@@ -8,7 +10,9 @@ import static enums.URLs.BASE_URL;
 public class SearchTest extends BaseTest {
 
     @Test
-    public void searchProductPositiveTest() {new Navigation().navigateToUrl(BASE_URL.getValue());
+    @Severity(SeverityLevel.TRIVIAL)
+    public void searchProductPositiveTest() {
+        new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
                 .clickSearchHeaderButton()
@@ -23,6 +27,7 @@ public class SearchTest extends BaseTest {
     }
 
     @Test
+    @Severity(SeverityLevel.TRIVIAL)
     public void searchProductNegativeTest() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();

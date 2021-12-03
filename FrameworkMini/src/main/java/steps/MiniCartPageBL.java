@@ -24,7 +24,7 @@ public class MiniCartPageBL {
     }
 
     public void verifySamsungSyncMasterInTheCart() {
-        Assert.assertTrue(miniCartPage.getSamsungSyncMasterInCard().getText().equals("Samsung SyncMaster 941BW"), "Wrong items name in cart");
+        Assert.assertEquals(miniCartPage.getSamsungSyncMasterInCard().getText(), "Samsung SyncMaster 941BW", "Wrong items name in cart");
     }
 
     public MiniCartPageBL clickOnMiniCartButton() {

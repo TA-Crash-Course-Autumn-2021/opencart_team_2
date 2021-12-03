@@ -157,14 +157,14 @@ public class ProductTypePageBL {
     }
 
     public ProductTypePageBL verifySamsungSyncMaster941BWPrice() {
-        String expectedMessage = "9.111";
-        Assert.assertTrue(this.getPriceSamsungSyncMaster941BWStringType().equals(expectedMessage), "Incorrect price SamsungSyncMaster941BW");
+        String expectedMessage = "7.83";
+        Assert.assertTrue(this.getPriceSamsungSyncMaster941BWStringType().contains(expectedMessage), "Incorrect price SamsungSyncMaster941BW");
         return this;
     }
 
     public ProductTypePageBL verifySamsungSyncMaster941BWTax() {
-        String expectedMessage = "7.530";
-        Assert.assertTrue(this.getTaxSamsungSyncMaster941BWStringType().equals(expectedMessage), "Incorrect tax SamsungSyncMaster941BW");
+        String expectedMessage = "7.5";
+        Assert.assertTrue(this.getTaxSamsungSyncMaster941BWStringType().contains(expectedMessage), "Incorrect tax SamsungSyncMaster941BW");
         return this;
     }
 }

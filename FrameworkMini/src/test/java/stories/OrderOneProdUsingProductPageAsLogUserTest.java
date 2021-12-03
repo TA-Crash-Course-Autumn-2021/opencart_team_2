@@ -21,7 +21,7 @@ public class OrderOneProdUsingProductPageAsLogUserTest extends StoriesBaseTest {
     }
 
     @Test
-    public void addProductToShoppingCartByProdPageTest() throws InterruptedException {
+    public void addProductToShoppingCartByProdPageTest() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         mainPageBL.getMenuPageBL()
