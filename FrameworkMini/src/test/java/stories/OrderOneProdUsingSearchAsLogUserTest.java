@@ -23,19 +23,14 @@ public class OrderOneProdUsingSearchAsLogUserTest extends StoriesBaseTest {
     }
 
     @Test
-    public void searchElementAndAddToCard() {
+    public void searchElementAndAddToCardAndCheckoutPerson() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         SearchPageBL searchPageBL = mainPageBL.getHeaderPageBL()
                 .inputSearchAddToCart("Mac")
                 .clickOnAddToCart("MacBook Air");
         searchPageBL.verifyAddMacBook();
-    }
 
-    @Test
-    public void stepCheckoutPerson(){
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()
                 .clickOnCheckoutButton()
                 .checkoutPersonStep2()
@@ -45,6 +40,7 @@ public class OrderOneProdUsingSearchAsLogUserTest extends StoriesBaseTest {
                 .checkoutPersonStep6();
 
         checkoutPageBL.verifyCheckout();
-
     }
+
+
 }

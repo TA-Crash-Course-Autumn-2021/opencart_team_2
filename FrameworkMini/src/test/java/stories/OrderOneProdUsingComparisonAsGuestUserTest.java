@@ -11,7 +11,7 @@ import static enums.URLs.BASE_URL;
 
 public class OrderOneProdUsingComparisonAsGuestUserTest extends StoriesBaseTest {
     @Test
-    public void searchByMenuAndAddToCompare() {
+    public void searchByMenuAndAddToCompareAndCheckoutPerson() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         AddToComparePageBL addToComparePageBL = mainPageBL.getMenuPageBL()
@@ -22,11 +22,7 @@ public class OrderOneProdUsingComparisonAsGuestUserTest extends StoriesBaseTest 
                 .clickOnProductComparisonMac()
                 .clickOnAddToShoppingCartButton();
         addToComparePageBL.verifyAddIMac();
-    }
-    @Test
-    public void stepCheckoutPerson(){
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
+
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()
                 .clickOnCheckoutButton()
                 .checkoutPersonStep1()
@@ -37,4 +33,5 @@ public class OrderOneProdUsingComparisonAsGuestUserTest extends StoriesBaseTest 
 
         checkoutPageBL.verifyCheckout();
     }
+
 }

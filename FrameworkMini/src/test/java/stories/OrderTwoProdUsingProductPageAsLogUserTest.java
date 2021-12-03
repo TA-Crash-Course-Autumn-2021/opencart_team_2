@@ -21,7 +21,7 @@ public class OrderTwoProdUsingProductPageAsLogUserTest extends StoriesBaseTest {
         wishListPageBL.verifyLoginInWishList();
     }
     @Test
-    public void addProductToShoppingCartByProdPageTest() throws InterruptedException {
+    public void addProductToShoppingCartByProdPageAndCheckoutPerson()  {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         mainPageBL.getMenuPageBL()
@@ -37,11 +37,6 @@ public class OrderTwoProdUsingProductPageAsLogUserTest extends StoriesBaseTest {
                 .clickOnAddToCartButton()
                 .verifyAddProductButton("iPhone");
 
-    }
-    @Test
-    public void stepCheckoutPerson(){
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()
                 .clickOnCheckoutButton()
                 .checkoutPersonStep2()
@@ -51,6 +46,7 @@ public class OrderTwoProdUsingProductPageAsLogUserTest extends StoriesBaseTest {
                 .checkoutPersonStep6();
 
         checkoutPageBL.verifyCheckout();
+
 
     }
 }

@@ -9,7 +9,7 @@ import static enums.URLs.BASE_URL;
 
 public class OrderOneProdUsingProductPageAsGuestUserTest extends StoriesBaseTest{
     @Test
-    public void addProductToShoppingCartByProdPageTest() throws InterruptedException {
+    public void addProductToShoppingCartByProdPageAndCheckoutPerson()  {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         mainPageBL.getMenuPageBL()
@@ -18,11 +18,8 @@ public class OrderOneProdUsingProductPageAsGuestUserTest extends StoriesBaseTest
                 .clickOnIMacAirMenuButton()
                 .clickOnAddToCartButton()
                 .verifyAddProductButton("iMac");
-    }
-    @Test
-    public void stepCheckoutPerson(){
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
+
+        //stepCheckoutPerson
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()
                 .clickOnCheckoutButton()
                 .checkoutPersonStep1()
@@ -33,4 +30,5 @@ public class OrderOneProdUsingProductPageAsGuestUserTest extends StoriesBaseTest
 
         checkoutPageBL.verifyCheckout();
     }
+
 }
