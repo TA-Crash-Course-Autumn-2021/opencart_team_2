@@ -24,7 +24,7 @@ public class OrderOneProdUsingProductPageAsLogUserTest extends StoriesBaseTest {
     }
 
     @Test
-    public void addProductToShoppingCartByProdPageTest() {
+    public void addProductToShoppingCartByProdPageAndCheckoutPerson() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
         mainPageBL.getMenuPageBL()
@@ -33,12 +33,7 @@ public class OrderOneProdUsingProductPageAsLogUserTest extends StoriesBaseTest {
                 .clickOnIMacAirMenuButton()
                 .clickOnAddToCartButton()
                 .verifyAddProductButton("iMac");
-    }
 
-    @Test
-    public void stepCheckoutPerson(){
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()
                 .clickOnCheckoutButton()
                 .checkoutPersonStep2()
@@ -49,6 +44,3 @@ public class OrderOneProdUsingProductPageAsLogUserTest extends StoriesBaseTest {
         checkoutPageBL.verifyCheckout();
     }
 }
-
-
-

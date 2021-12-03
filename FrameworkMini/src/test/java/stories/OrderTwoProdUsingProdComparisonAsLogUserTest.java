@@ -1,6 +1,7 @@
 package stories;
 
 import navigation.Navigation;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import steps.CheckoutPageBL;
 import steps.MainPageBL;
@@ -10,6 +11,17 @@ import steps.user.LoginUserByWishListPageBL;
 import static enums.URLs.BASE_URL;
 
 public class OrderTwoProdUsingProdComparisonAsLogUserTest extends StoriesBaseTest{
+    @BeforeClass
+    public void loginUserWithInWishListPage() {
+        new Navigation().navigateToUrl(BASE_URL.getValue());
+        MainPageBL mainPageBL = new MainPageBL();
+        LoginUserByWishListPageBL wishListPageBL = mainPageBL.getHeaderPageBL()
+                .clickOnWishListButton()
+                .clickOnLoginButton()
+                .loginPerson();
+        wishListPageBL.verifyLoginInWishList();
+    }
+
     @Test
     public void searchAndAddToCompare() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
@@ -30,21 +42,7 @@ public class OrderTwoProdUsingProdComparisonAsLogUserTest extends StoriesBaseTes
                 .clickOnProductComparisonIPhone()
                 .clickOnRemoveButton()
                 .clickOnAddToShoppingCartButton();
-    }
-    @Test
-    public void loginUserWithInWishListPage() {
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
-        LoginUserByWishListPageBL wishListPageBL = mainPageBL.getHeaderPageBL()
-                .clickOnWishListButton()
-                .clickOnLoginButton()
-                .loginPerson();
-        wishListPageBL.verifyLoginInWishList();
-    }
-    @Test
-    public void stepCheckoutPerson(){
-        new Navigation().navigateToUrl(BASE_URL.getValue());
-        MainPageBL mainPageBL = new MainPageBL();
+
         CheckoutPageBL checkoutPageBL= mainPageBL.getHeaderPageBL()
                 .clickOnCheckoutButton()
                 .checkoutPersonStep2()
@@ -54,4 +52,6 @@ public class OrderTwoProdUsingProdComparisonAsLogUserTest extends StoriesBaseTes
                 .checkoutPersonStep6();
         checkoutPageBL.verifyCheckout();
     }
+
+
 }
