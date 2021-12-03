@@ -31,6 +31,21 @@ public class RegisterPageBL {
         return this;
     }
 
+    public RegisterPageBL registerNewPersonConstant() {
+        RegisterModel registerModel = RegisterModelRepository.getRegisterModelConstant();
+        inputFirstName(registerModel.getFirstName());
+        inputLastName(registerModel.getLastName());
+        inputEmail(registerModel.getEmail());
+        inputTelephone(registerModel.getTelephone());
+        inputPassword(registerModel.getPassword());
+        chooseSubscribe(1);
+        clickPolicyCheckbox();
+        clickOnContinueButton();
+
+        successRegisterPage = new SuccessRegisterPage();
+        return this;
+    }
+
     private void inputFirstName(String firstName) {
         registerPage.getFirstNameInput().clear();
         registerPage.getFirstNameInput().sendKeys(firstName);

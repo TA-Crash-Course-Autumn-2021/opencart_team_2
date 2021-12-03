@@ -5,6 +5,7 @@ import org.testng.Assert;
 import pages.HeaderPage;
 import steps.menu.AddToComparePageBL;
 import steps.user.LoginUserByWishListPageBL;
+import steps.user.MyAccountPageBL;
 import steps.user.RegisterPageBL;
 
 public class HeaderPageBL {
@@ -52,6 +53,11 @@ public class HeaderPageBL {
     public RegisterPageBL clickOnRegisterButton() {
         headerPage.getRegisterButton().click();
         return new RegisterPageBL();
+    }
+
+    public MyAccountPageBL clickOnAccountButton() {
+        headerPage.getAccountButton().click();
+        return new MyAccountPageBL();
     }
 
     public WishListPageBL clickWishListButton(){

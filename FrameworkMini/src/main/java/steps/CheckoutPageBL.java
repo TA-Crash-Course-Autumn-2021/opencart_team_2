@@ -12,7 +12,6 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class CheckoutPageBL {
-    protected WebDriver driver;
     private CheckoutPage checkoutPage;
     private SuccessCheckoutPage successCheckoutPage;
 

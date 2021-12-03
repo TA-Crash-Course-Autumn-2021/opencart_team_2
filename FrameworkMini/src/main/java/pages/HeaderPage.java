@@ -16,6 +16,9 @@ public class HeaderPage extends BasePage {
     @FindBy(xpath = ".//*[contains(@href,'register')]")
     private WebElement registerButton;
 
+    @FindBy(xpath = "//*[@class='dropdown-menu dropdown-menu-right']//a[contains(@href,'account') and text()='My Account']")
+    private WebElement accountButton;
+
     @FindBy(xpath = ".//*[@title='Checkout']")
     private WebElement checkoutButton;
 
@@ -53,6 +56,11 @@ public class HeaderPage extends BasePage {
         return registerButton;
     }
 
+    public WebElement getAccountButton() {
+        wait.until(ExpectedConditions.visibilityOf(accountButton));
+        return accountButton;
+    }
+
     public WebElement getSearch() {
         return search;
     }
@@ -64,6 +72,7 @@ public class HeaderPage extends BasePage {
     public WebElement getCheckoutButton() {
         return checkoutButton;
     }
+
     public WebElement getLoginButton() {
         return driver.findElement(By.xpath(".//*[contains(@href,'login') and @class='list-group-item']"));
     }
