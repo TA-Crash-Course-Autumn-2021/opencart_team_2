@@ -1,6 +1,7 @@
 package stories;
 
 import navigation.Navigation;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import steps.CheckoutPageBL;
 import steps.MainPageBL;
@@ -24,7 +25,7 @@ public class OrderOneProdUsingProdComparisonAsLogUserTest extends StoriesBaseTes
          addToComparePageBL.verifyAddIMac();
     }
 
-    @Test
+    @BeforeClass
     public void loginUserWithInWishListPage() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();

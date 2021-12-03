@@ -1,6 +1,7 @@
 package stories;
 
 import navigation.Navigation;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import steps.AddToWishListPageBL;
 import steps.CheckoutPageBL;
@@ -11,7 +12,7 @@ import steps.user.LoginUserByWishListPageBL;
 import static enums.URLs.BASE_URL;
 
 public class OrderOneProdUsingWishlistAsLogUserTest extends StoriesBaseTest{
-    @Test
+    @BeforeClass
     public void loginUserWithInWishListPage() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
