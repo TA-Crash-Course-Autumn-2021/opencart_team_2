@@ -24,6 +24,18 @@ public class AddTaxRatesPageBL {
         return this;
     }
 
+    public AddTaxRatesPageBL addTaxRatesCarbon() {
+        TaxRatesModel taxRatesModel = TaxRatesModelRepository.getTaxRatesModelCarbon();
+        inputTaxNameTitle(taxRatesModel.getTaxName());
+        inputTaxRate(taxRatesModel.getTaxRate());
+        clickTypeMenu();
+        addTexRatesPage.chooseTypeSubmenu(taxRatesModel.getType());
+        clickGeoZoneMenu();
+        addTexRatesPage.chooseGeoZoneSubmenu(taxRatesModel.getGeoZone());
+        clickSaveButton();
+        return this;
+    }
+
     private void inputTaxNameTitle(String taxName) {
         addTexRatesPage.getTaxNameInput().sendKeys(taxName);
     }

@@ -3,7 +3,7 @@ package steps.administration.taxRates;
 import models.TaxRatesModel;
 import org.testng.Assert;
 import pages.administration.taxRates.EditTaxRatesPage;
-import repository.taxRates.TaxRatesModelRepository;
+import repository.taxRates.TaxRatesEditModelRepository;
 
 public class EditTaxRatesPageBL {
     EditTaxRatesPage editTaxRatesPage;
@@ -12,15 +12,18 @@ public class EditTaxRatesPageBL {
         editTaxRatesPage = new EditTaxRatesPage();
     }
 
-    public EditTaxRatesPageBL registerEditTaxRates() {
-        TaxRatesModel taxRatesModel = TaxRatesModelRepository.getTaxRatesModel();
+    public EditTaxRatesPageBL registerEditTaxRates() throws InterruptedException {
+        TaxRatesModel taxRatesModel = TaxRatesEditModelRepository.getTaxRatesEditModel();
         inputTaxNameTitle(taxRatesModel.getTaxName());
         inputTaxRate(taxRatesModel.getTaxRate());
         clickTypeMenu();
-        editTaxRatesPage.chooseTypeSubmenu(taxRatesModel.getType());
+        editTaxRatesPage.chooseTypeSubmenu(taxRatesModel.getType()).click();
         clickGeoZoneMenu();
-        editTaxRatesPage.chooseGeoZoneSubmenu(taxRatesModel.getGeoZone());
+        Thread.sleep(40000);
+        editTaxRatesPage.chooseGeoZoneSubmenu(taxRatesModel.getGeoZone()).click();
+        Thread.sleep(40000);
         clickSaveButton();
+        Thread.sleep(40000);
         return this;
     }
 

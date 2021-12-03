@@ -42,7 +42,6 @@ public class TaxRatesContainer extends BasePage {
     }
 
     public WebElement getActionEditTaxButton() {
-        wait.until(ExpectedConditions.visibilityOf(rootElement.findElement(By.xpath(".//*[@data-original-title='Edit']"))));
         return rootElement.findElement(By.xpath(".//*[@data-original-title='Edit']"));
     }
 }

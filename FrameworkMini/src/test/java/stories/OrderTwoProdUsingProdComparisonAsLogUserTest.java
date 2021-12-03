@@ -50,7 +50,6 @@ public class OrderTwoProdUsingProdComparisonAsLogUserTest extends StoriesBaseTes
                 .checkoutPersonStep4()
                 .checkoutPersonStep5()
                 .checkoutPersonStep6();
-
         checkoutPageBL.verifyCheckout();
     }
 

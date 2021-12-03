@@ -21,7 +21,7 @@ public class AddTaxClassesPage extends BasePage {
     WebElement taxRateMenu;
 
     public WebElement chooseTaxRateSubmenu(String  value) { //87 (Eco Tax (-2.00)) or 86 (VAT (20%))
-        return driver.findElement(By.xpath("//select[@class='form-control' and contains(@name,'tax_rate_id')]//*[@value='" + value + "']"));
+        return driver.findElement(By.xpath("//select[@class='form-control' and contains(@name,'tax_rate_id')]//*[text()='" + value + "']"));
     }
 
     @FindBy(xpath = "//select[@class='form-control' and contains(@name,'based')]")

@@ -1,3 +1,5 @@
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import navigation.Navigation;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -8,6 +10,7 @@ import steps.user.LoginUserByWishListPageBL;
 import static enums.URLs.BASE_URL;
 
 public class AddToCompareAndWishlistTest extends BaseTest{
+
     @BeforeClass
     public void loginUserWithInWishListPage() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
@@ -18,7 +21,9 @@ public class AddToCompareAndWishlistTest extends BaseTest{
                 .loginPerson();
         wishListPageBL.verifyLoginInWishList();
     }
+
     @Test
+    @Severity(SeverityLevel.TRIVIAL)
     public void searchByMenuAndAddToCompare() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();

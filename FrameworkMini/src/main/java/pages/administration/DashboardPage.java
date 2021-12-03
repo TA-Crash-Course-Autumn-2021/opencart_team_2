@@ -1,5 +1,6 @@
 package pages.administration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,14 +11,11 @@ public class DashboardPage extends BasePage {
     @FindBy(id = "menu-system")
     WebElement menuSystem;
 
-    @FindBy(xpath = "//a[text() = 'Localisation']")
-    WebElement submenuLocalisation;
+    @FindBy(id = "menu-catalog")
+    WebElement menuCatalog;
 
     @FindBy(xpath = "//a[text() = 'Currencies']")
     WebElement submenuCurrencies;
-
-    @FindBy(xpath = "//a[text() = 'Taxes']")
-    WebElement submenuTaxes;
 
     @FindBy(xpath = "//a[text() = 'Tax Classes']")
     WebElement submenuTaxClasses;
@@ -25,14 +23,22 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//a[text() = 'Tax Rates']")
     WebElement submenuTaxRates;
 
+    @FindBy(xpath = "//a[text() = 'Products']")
+    WebElement submenuProducts;
+
     public WebElement getMenuSystem(){
         wait.until(ExpectedConditions.visibilityOf(menuSystem));
         return menuSystem;
     }
 
-    public WebElement getSubmenuLocalisation(){
-        wait.until(ExpectedConditions.visibilityOf(submenuLocalisation));
-        return submenuLocalisation;
+    public WebElement getMenuCatalog(){
+        wait.until(ExpectedConditions.visibilityOf(menuCatalog));
+        return menuCatalog;
+    }
+
+    public WebElement chooseMenu(String nameMenu){
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[text() = '" + nameMenu + "']"))));
+        return driver.findElement(By.xpath("//a[text() = '" + nameMenu + "']"));
     }
 
     public WebElement getSubmenuCurrencies(){
@@ -40,14 +46,14 @@ public class DashboardPage extends BasePage {
         return submenuCurrencies;
     }
 
-    public WebElement getSubmenuTaxes(){
-        wait.until(ExpectedConditions.visibilityOf(submenuTaxes));
-        return submenuTaxes;
-    }
-
     public WebElement getSubmenuTaxClasses(){
         wait.until(ExpectedConditions.visibilityOf(submenuTaxClasses));
         return submenuTaxClasses;
+    }
+
+    public WebElement getSubmenuProducts(){
+        wait.until(ExpectedConditions.visibilityOf(submenuProducts));
+        return submenuProducts;
     }
 
     public WebElement getSubmenuTaxRates(){

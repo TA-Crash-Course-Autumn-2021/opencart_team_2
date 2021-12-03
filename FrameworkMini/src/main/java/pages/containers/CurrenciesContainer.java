@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
-import java.util.List;
 
 public class CurrenciesContainer extends BasePage {
 

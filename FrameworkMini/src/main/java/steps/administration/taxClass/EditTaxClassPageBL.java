@@ -27,6 +27,17 @@ public class EditTaxClassPageBL {
         return this;
     }
 
+    public EditTaxClassPageBL editTaxClassesGoods() {
+        TaxClassesModel taxClassesModel = TaxClassEditModelRepository.getTaxClassesModelEdit();
+        clickTaxRateMenu();
+        editTaxClassPage.chooseTaxRateSubmenu(taxClassesModel.getTaxRate()).click();
+        clickBasedOnMenu();
+        editTaxClassPage.chooseBasedOnSubmenu(taxClassesModel.getBasedOn()).click();
+        inputPriority(taxClassesModel.getPriority());
+        clickSaveButton();
+        return this;
+    }
+
     private void inputTaxClassTitle(String classTitle) {
         editTaxClassPage.getTaxClassTitleInput().click();
         editTaxClassPage.getTaxClassTitleInput().clear();

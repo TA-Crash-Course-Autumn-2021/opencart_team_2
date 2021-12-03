@@ -11,9 +11,19 @@ public class TaxClassEditModelRepository {
         return TaxClassesModel.builder()
                 .taxClassTitle("Sales")
                 .description("Sales taxes are taxes imposed as a percentage of firms’ sales")
-                .taxRate("86")
-                .basedOn("store")
+                .taxRate("Eco Tax (-2.00)")
+                .basedOn("shipping")
                 .priority("2")
+                .build();
+    }
+
+    public static TaxClassesModel getTaxClassesModelEdit() {
+        return TaxClassesModel.builder()
+                .taxClassTitle("Sales")
+                .description("Sales taxes are taxes imposed as a percentage of firms’ sales")
+                .taxRate("Carbon tax")
+                .basedOn("shipping")
+                .priority("1")
                 .build();
     }
 }

@@ -12,13 +12,17 @@ public class DashboardPageBL {
         dashboardPage = new DashboardPage();
     }
 
+    public DashboardPageBL clickMenu(String nameMenu) {
+        dashboardPage.chooseMenu(nameMenu).click();
+        return this;
+    }
+
     public DashboardPageBL clickMenuSystem() {
         dashboardPage.getMenuSystem().click();
         return this;
     }
-
-    public DashboardPageBL clickSubmenuLocalisation() {
-        dashboardPage.getSubmenuLocalisation().click();
+    public DashboardPageBL clickMenuCatalog() {
+        dashboardPage.getMenuCatalog().click();
         return this;
     }
 
@@ -27,14 +31,14 @@ public class DashboardPageBL {
         return new CurrenciesPageBL();
     }
 
-    public DashboardPageBL clickSubmenuTaxes() {
-        dashboardPage.getSubmenuTaxes().click();
-        return this;
-    }
-
     public TaxClassesPageBL clickSubmenuTaxClasses() {
         dashboardPage.getSubmenuTaxClasses().click();
         return new TaxClassesPageBL();
+    }
+
+    public ProductsPageBL clickSubmenuProducts() {
+        dashboardPage.getSubmenuProducts().click();
+        return new ProductsPageBL();
     }
 
     public TaxRatesPageBL clickSubmenuTaxRates() {

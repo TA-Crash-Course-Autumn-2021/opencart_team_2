@@ -18,14 +18,14 @@ public class EditTaxRatesPage extends BasePage {
     WebElement typeMenu;
 
     public WebElement chooseTypeSubmenu(String value) { //F (Fixed Amount) or P (Percentage)
-        return driver.findElement(By.xpath("//*[@id='input-type']//*[@value='" + value + "']"));
+        return driver.findElement(By.xpath("//*[@id='input-type']//*[text()='" + value + "']"));
     }
 
     @FindBy(id = "input-geo-zone")
     WebElement geoZoneMenu;
 
     public WebElement chooseGeoZoneSubmenu(String value) { //4 (UK Shipping) or 3 (UK VAT Zone)
-        return driver.findElement(By.xpath("//*[@id='input-geo-zone']//*[@value='" + value + "']"));
+        return driver.findElement(By.xpath("//*[@id='input-geo-zone']//*[text()='" + value + "']"));
     }
 
     @FindBy(xpath = "//*[@data-original-title='Save']")

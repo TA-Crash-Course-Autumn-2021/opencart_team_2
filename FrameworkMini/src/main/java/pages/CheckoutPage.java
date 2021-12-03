@@ -97,10 +97,6 @@ public class CheckoutPage extends BasePage{
         return city;
     }
 
-//    public WebElement getCountryInput() {
-  //      return country;
-  //  }
-
     public WebElement getPostCodeInput() {
         return postcode;
     }
@@ -172,7 +168,6 @@ public class CheckoutPage extends BasePage{
         return driver.findElement(By.xpath("//select[contains(@id, 'input-payment-country')]//option[@value = '" + value + "']"));
     }
 
-
     public WebElement getStep() {
         return driver.findElement(By.xpath(".//*[(@href='#collapse-shipping-address')]"));
     }
@@ -189,4 +184,11 @@ public class CheckoutPage extends BasePage{
         return emailInput;
     }
 
+    @FindBy(xpath = "//*[text()='Carbon tax:']")
+    private WebElement newTax;
+
+    public WebElement getNewTax() {
+        wait.until(ExpectedConditions.visibilityOf(newTax));
+        return newTax;
+    }
 }

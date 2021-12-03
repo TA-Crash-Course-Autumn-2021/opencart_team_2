@@ -20,10 +20,10 @@ public class HeaderPageBL {
         return new SearchPageBL();
     }
 
-    public SearchPageBL inputSearchAddToCart(String keyWords) {
+    public SearchPageBL inputSearchAddToCart(String keywords) {
         headerPage.getSearch().click();
         headerPage.getSearch().clear();
-        headerPage.getSearch().sendKeys(keyWords);
+        headerPage.getSearch().sendKeys(keywords);
         headerPage.getSearch().sendKeys(Keys.ENTER);
         return new SearchPageBL();
     }
@@ -102,16 +102,14 @@ public class HeaderPageBL {
     }
 
     public HeaderPageBL verifyMacBookPrice() {
-        String expectedMessage = "22.665";
-        Assert.assertTrue(this.getPriceMacbookStringType().equals(expectedMessage), "Incorrect price MacBook");
+        String expectedMessage = "19.4";
+        Assert.assertTrue(this.getPriceMacbookStringType().contains(expectedMessage), "Incorrect price MacBook");
         return this;
     }
 
     public HeaderPageBL verifyMacBookTax() {
-        String expectedMessage = "18.825";
-        Assert.assertTrue(this.getTaxMacbookStringType().equals(expectedMessage), "Incorrect tax MacBook");
+        String expectedMessage = "18.8";
+        Assert.assertTrue(this.getTaxMacbookStringType().contains(expectedMessage), "Incorrect tax MacBook");
         return this;
     }
-
 }
-

@@ -15,4 +15,13 @@ public class TaxRatesModelRepository {
                 .geoZone("3")
                 .build();
     }
+
+    public static TaxRatesModel getTaxRatesModelCarbon() {
+        return TaxRatesModel.builder()
+                .taxName("Carbon tax")
+                .taxRate("3")
+                .type("P")
+                .geoZone("3")
+                .build();
+    }
 }
