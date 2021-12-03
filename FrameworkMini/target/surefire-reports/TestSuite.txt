@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 68, Failures: 1, Errors: 0, Skipped: 4, Time elapsed: 685.152 s <<< FAILURE! - in TestSuite
-changeCurrencyTest(administration.ChangeCurrencyTest)  Time elapsed: 2.008 s  <<< FAILURE!
-java.lang.AssertionError: Incorrect tax iMac expected [true] but found [false]
-	at administration.ChangeCurrencyTest.changeCurrencyTest(ChangeCurrencyTest.java:25)
-

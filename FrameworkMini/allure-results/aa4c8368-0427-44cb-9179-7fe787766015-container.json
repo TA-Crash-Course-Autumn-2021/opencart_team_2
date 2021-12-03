@@ -1,1 +1,0 @@
-{"uuid":"aa4c8368-0427-44cb-9179-7fe787766015","name":"FrameworkMini","children":["4ea37577-a027-4d02-8999-3064bbe1bbec"],"befores":[{"name":"addNewCurrency","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1638544524192,"stop":1638544534352}],"afters":[],"start":1638544524176,"stop":1638544541797}

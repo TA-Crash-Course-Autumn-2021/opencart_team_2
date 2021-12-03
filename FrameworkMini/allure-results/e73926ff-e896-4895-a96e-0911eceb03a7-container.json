@@ -1,1 +1,0 @@
-{"uuid":"e73926ff-e896-4895-a96e-0911eceb03a7","name":"FrameworkMini","children":["bdcf5e47-4841-4738-b7c1-3058b01b7b1f"],"befores":[],"afters":[{"name":"deleteCurrency","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1638544216993,"stop":1638544224970}],"start":1638544204858,"stop":1638544224970}
