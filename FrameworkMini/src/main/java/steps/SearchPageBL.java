@@ -86,7 +86,7 @@ public class SearchPageBL {
     }
 
     public SearchPageBL verifyiMacTax() {
-        String expectedMessage = "3.77";
+        String expectedMessage = "3.7";
         Assert.assertTrue(this.getTaxiMacStringType().contains(expectedMessage), "Incorrect tax iMac");
         return this;
     }

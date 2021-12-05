@@ -4,6 +4,7 @@ import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import pages.HeaderPage;
 import steps.menu.AddToComparePageBL;
+import steps.user.LoginPageBL;
 import steps.user.LoginUserByWishListPageBL;
 import steps.user.MyAccountPageBL;
 import steps.user.RegisterPageBL;
@@ -75,6 +76,12 @@ public class HeaderPageBL {
         return new LoginUserByWishListPageBL();
     }
 
+
+    public LoginPageBL clickOnLoginButtonLoginPage() {
+        headerPage.getLoginButton().click();
+        return new LoginPageBL();
+    }
+
     public CheckoutPageBL clickOnCheckoutButton() {
         headerPage.getCheckoutButton().click();
         return new CheckoutPageBL();
@@ -117,5 +124,9 @@ public class HeaderPageBL {
         String expectedMessage = "18.8";
         Assert.assertTrue(this.getTaxMacbookStringType().contains(expectedMessage), "Incorrect tax MacBook");
         return this;
+    }
+    public HeaderPageBL clickOnLogoutButton() {
+        headerPage.getLogoutButton().click();
+        return new HeaderPageBL();
     }
 }

@@ -10,6 +10,7 @@ public class LoginPageBL {
     public LoginPageBL() {
         loginPageBL = new LoginPage();
     }
+
     public MyAccountPageBL loginPerson() {
         RegisterModel registerModel = RegisterModelRepository.getRegisterModelConstant();
         inputEmail(registerModel.getEmail());
@@ -17,6 +18,24 @@ public class LoginPageBL {
         clickOnLoginButton();
         return new MyAccountPageBL();
     }
+
+    public MyAccountPageBL loginPerson(String password,String email) {
+        RegisterModel registerModel = RegisterModelRepository.getRegisterModelConstant();
+        inputEmail(email);
+        inputPassword(password);
+        clickOnLoginButton();
+        return new MyAccountPageBL();
+    }
+
+    public MyAccountPageBL loginPersonWithEmail(String email) {
+        RegisterModel registerModel = RegisterModelRepository.getRegisterModelInEmail(email);
+        inputEmail(email);
+        inputPassword(registerModel.getPassword());
+        clickOnLoginButton();
+        return new MyAccountPageBL();
+    }
+
+
     private void inputEmail(String email) {
         loginPageBL.getEmailInput().click();
         loginPageBL.getEmailInput().clear();

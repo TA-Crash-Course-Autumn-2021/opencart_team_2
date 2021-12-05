@@ -1,5 +1,7 @@
 package stories;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import navigation.Navigation;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -20,7 +22,9 @@ public class OrderTreeProdUsingProductPageAsLogUserTest extends StoriesBaseTest 
                 .loginPerson();
         wishListPageBL.verifyLoginInWishList();
     }
+
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     public void addProductToShoppingCartByProdPageTestAndCheckoutPerson() throws InterruptedException {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();

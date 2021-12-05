@@ -5,9 +5,9 @@ import io.qameta.allure.SeverityLevel;
 import navigation.Navigation;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import steps.HeaderPageBL;
 import steps.MainPageBL;
 import steps.user.MyAccountPageBL;
-import steps.user.RegisterPageBL;
 
 import static enums.URLs.BASE_URL;
 
@@ -16,11 +16,10 @@ public class EditAccountInformationTest extends AccountBaseTest {
     public void registerNewPerson() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();
-        RegisterPageBL registerPageBL = mainPageBL.getHeaderPageBL()
+        HeaderPageBL registerPageBL = mainPageBL.getHeaderPageBL()
                 .clickOnMyAccountButton()
                 .clickOnRegisterButton()
                 .registerNewPersonConstant();
-        registerPageBL.verifyUserRegistration();
     }
 
     @Test

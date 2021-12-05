@@ -22,6 +22,17 @@ public class MyAccountPage extends BasePage {
     @FindBy(xpath = "//*[@class='list-group']//*[contains(@href,'address')]")
     private WebElement editAddressButton;
 
+    @FindBy(xpath = ".//*[contains(@href,'logout')]")
+    private WebElement logoutButton;
+
+    @FindBy(xpath = ".//*[@title='My Account']")
+    private WebElement myAccountButton;
+
+    public WebElement getMyAccountButton() {
+        wait.until(ExpectedConditions.visibilityOf(myAccountButton));
+        return myAccountButton;
+    }
+
     public WebElement getChangePasswordLink() {
         return changePasswordLink;
     }
@@ -41,5 +52,9 @@ public class MyAccountPage extends BasePage {
 
     public WebElement getAddressButton() {
         return editAddressButton;
+    }
+
+    public WebElement getLogoutButton() {
+        return logoutButton;
     }
 }

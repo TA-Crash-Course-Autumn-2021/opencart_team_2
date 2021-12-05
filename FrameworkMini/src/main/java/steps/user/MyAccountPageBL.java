@@ -3,6 +3,7 @@ package steps.user;
 
 import org.testng.Assert;
 import pages.user.MyAccountPage;
+import steps.HeaderPageBL;
 
 public class MyAccountPageBL {
 
@@ -40,5 +41,15 @@ public class MyAccountPageBL {
     public void verifyUserChangeSuccess() {
         String expectedMessage = "Success: Your account has been successfully updated.";
         Assert.assertEquals(myAccountPage.getSuccessChangePasswordAlert().getText(), expectedMessage, "Incorrect page title");
+    }
+
+    public HeaderPageBL clickOnLogoutButton() {
+        myAccountPage.getLogoutButton().click();
+        return new HeaderPageBL();
+    }
+
+    public MyAccountPageBL clickOnMyAccountButton() {
+        myAccountPage.getMyAccountButton().click();
+        return new MyAccountPageBL();
     }
 }

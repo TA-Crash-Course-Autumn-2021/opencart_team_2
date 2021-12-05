@@ -4,6 +4,7 @@ import models.RegisterModel;
 import pages.success.SuccessRegisterPage;
 import pages.user.RegisterPage;
 import repository.RegisterModelRepository;
+import steps.HeaderPageBL;
 import util.DriverUtils;
 import org.testng.Assert;
 
@@ -31,7 +32,7 @@ public class RegisterPageBL {
         return this;
     }
 
-    public RegisterPageBL registerNewPersonConstant() {
+    public HeaderPageBL registerNewPersonConstant() {
         RegisterModel registerModel = RegisterModelRepository.getRegisterModelConstant();
         inputFirstName(registerModel.getFirstName());
         inputLastName(registerModel.getLastName());
@@ -43,7 +44,7 @@ public class RegisterPageBL {
         clickOnContinueButton();
 
         successRegisterPage = new SuccessRegisterPage();
-        return this;
+        return new HeaderPageBL();
     }
 
     private void inputFirstName(String firstName) {
@@ -88,5 +89,25 @@ public class RegisterPageBL {
     public void verifyUserRegistration() {
         String expectedMessage = "Your Account Has Been Created!";
         Assert.assertEquals(successRegisterPage.getSuccessTitle().getText(), expectedMessage, "Incorrect page title");
+    }
+
+    public HeaderPageBL clickOnLogoutButton() {
+        registerPage.getLogoutButton().click();
+        return new HeaderPageBL();
+    }
+
+    public HeaderPageBL registerNewPersonWithEmail(String email) {
+        RegisterModel registerModel = RegisterModelRepository.getRegisterModelConstant();
+        inputFirstName(registerModel.getFirstName());
+        inputLastName(registerModel.getLastName());
+        inputEmail(email);
+        inputTelephone(registerModel.getTelephone());
+        inputPassword(registerModel.getPassword());
+        chooseSubscribe(1);
+        clickPolicyCheckbox();
+        clickOnContinueButton();
+
+        successRegisterPage = new SuccessRegisterPage();
+        return new HeaderPageBL();
     }
 }

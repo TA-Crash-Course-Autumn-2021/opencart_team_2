@@ -1,6 +1,7 @@
 package steps.user;
 
 import pages.user.ChangePasswordPage;
+import steps.HeaderPageBL;
 
 public class ChangePasswordPageBL {
 
@@ -33,4 +34,5 @@ public class ChangePasswordPageBL {
         changePasswordPageBL.getContinueButton().click();
         return new MyAccountPageBL();
     }
+
 }
