@@ -1,5 +1,7 @@
 package stories;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import navigation.Navigation;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -23,6 +25,7 @@ public class OrderTwoProdUsingProdComparisonAsLogUserTest extends StoriesBaseTes
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     public void searchAndAddToCompare() {
         new Navigation().navigateToUrl(BASE_URL.getValue());
         MainPageBL mainPageBL = new MainPageBL();

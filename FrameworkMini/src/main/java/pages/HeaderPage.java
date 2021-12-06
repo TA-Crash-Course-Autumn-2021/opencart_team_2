@@ -73,8 +73,16 @@ public class HeaderPage extends BasePage {
         return checkoutButton;
     }
 
+
+    @FindBy(xpath = ".//*[contains(@href,'login') and @class='list-group-item']")
+    private WebElement loginButton;
+
+    @FindBy(xpath = ".//*[contains(@href,'logout')]")
+    private WebElement logoutButton;
+
     public WebElement getLoginButton() {
-        return driver.findElement(By.xpath(".//*[contains(@href,'login') and @class='list-group-item']"));
+        wait.until(ExpectedConditions.visibilityOf(loginButton));
+        return loginButton;
     }
 
     public WebElement getCurrencyButton() {
@@ -97,4 +105,8 @@ public class HeaderPage extends BasePage {
         return taxMacbook;
     }
 
+    public WebElement getLogoutButton() {
+        wait.until(ExpectedConditions.visibilityOf(logoutButton));
+        return logoutButton;
+    }
 }

@@ -2,6 +2,7 @@ package pages.user;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.BasePage;
 
 public class ChangePasswordPage extends BasePage {
@@ -25,4 +26,5 @@ public class ChangePasswordPage extends BasePage {
     public WebElement getContinueButton() {
         return continueButton;
     }
+
 }
